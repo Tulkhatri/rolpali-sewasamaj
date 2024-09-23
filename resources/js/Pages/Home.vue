@@ -130,20 +130,7 @@ import Testimonials from "../components/Testimonials.vue";
 
     <div class="video-testimonials-wrapper flex my-20">
         <div class="video basis-full">
-            Video Playerl bahadur khatri tul bahadur khatri dkjkfjk jk jl;fkjjds
-            jklfj;sifjid kdjdd jkd jsjksllfjdsoifjeioj sdkslfjscjdslkfe dskje
-            sdjlkdsdjfj ifjfsdkds kjeidsekjeio eijdkcjjdsjlfgoijcskdnej;
-            kjflkjoididjekjvoierij dkdjeefjoij jweoijos iojoifewio jiojjsio
-            wrijejidsfj iodfjewk;rr9ijfvdjkj wiitdkj tu
-            Video Playerl bahadur khatri tul bahadur khatri dkjkfjk jk jl;fkjjds
-            jklfj;sifjid kdjdd jkd jsjksllfjdsoifjeioj sdkslfjscjdslkfe dskje
-            sdjlkdsdjfj ifjfsdkds kjeidsekjeio eijdkcjjdsjlfgoijcskdnej;
-            kjflkjoididjekjvoierij dkdjeefjoij jweoijos iojoifewio jiojjsio
-            wrijejidsfj iodfjewk;rr9ijfvdjkj wiitdkj tu  Video Playerl bahadur khatri tul bahadur khatri dkjkfjk jk jl;fkjjds
-            jklfj;sifjid kdjdd jkd jsjksllfjdsoifjeioj sdkslfjscjdslkfe dskje
-            sdjlkdsdjfj ifjfsdkds kjeidsekjeio eijdkcjjdsjlfgoijcskdnej;
-            kjflkjoididjekjvoierij dkdjeefjoij jweoijos iojoifewio jiojjsio
-            wrijejidsfj iodfjewk;rr9ijfvdjkj wiitdkj tu
+            Video Playerl 
         </div>
         <Testimonials />
     </div>
