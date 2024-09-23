@@ -8,8 +8,9 @@
         navigation
         @swiper="onSwiper"
         @slideChange="onSlideChange"
+        class="swiper-slide"
     >
-        <swiper-slide class="swiper-slide relative">
+        <swiper-slide class="relative">
             <img src="../../assets/images/swiper/slider1.jpeg" alt="" />
             <div class="absolute inset-0 bg-sky-600/60"></div>
             <div class="absolute bottom-32 left-56 text-white">

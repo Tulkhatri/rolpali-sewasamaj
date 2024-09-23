@@ -1,8 +1,11 @@
-<script setup></script>
+<script setup>
+import Swiper from "../components/Swiper.vue";
+import Testimonials from "../components/Testimonials.vue";
+</script>
 <template>
     <!-- head imported globally inside app.js -->
     <Head title="Home"></Head>
-
+    <Swiper />
     <div class="flex items-center mt-20 mx-56">
         <div class="why-chose-us-image-wrapper basis-1/2 relative">
             <img src="../../assets/images/swiper/slider2.jpg" alt="" />
@@ -36,9 +39,8 @@
                 vitae dicta suntes explicabo. Nemo enim ipsam voluptatem
             </p>
             <button
-                class="mt-8 bg-theme-red text-white px-8 py-2 rounded-full font-medium hover:bg-red-800"
-            >
-                Read More...
+                class="mt-8 bg-theme-red text-white px-8 py-2 rounded-full font-medium hover:bg-red-800">
+                Read More
             </button>
         </div>
     </div>
@@ -112,7 +114,7 @@
             <h1
                 class="title-section text-3xl text-center font-medium text-white"
             >
-                Elections Timeline
+                Timeline
             </h1>
             <div class="mt-8 w-48 m-auto">
                 <img
@@ -122,11 +124,15 @@
                 />
             </div>
 
-            <h5 class="text-xl text-center text-white mt-2">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam
-            </h5>
+            <h5 class="text-xl text-center text-white">..</h5>
         </div>
+    </div>
+
+    <div class="video-testimonials-wrapper flex my-20">
+        <div class="video basis-full">
+            Video Playerl 
+        </div>
+        <Testimonials />
     </div>
 
     <!-- refresh page but doesnot go at top use preserve-scroll -->
