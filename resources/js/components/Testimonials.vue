@@ -8,9 +8,9 @@
         navigation
         @swiper="onSwiper"
         @slideChange="onSlideChange"
-        class="swiper-testimonials"
+        class="swiper-testimonials  bg-red-600"
     >
-        <swiper-slide class="testimonials pt-20 px-20 pb-14 bg-red-600">
+        <swiper-slide class="testimonials pt-20 px-20 pb-14">
             <font-awesome-icon
                 :icon="['fas', 'quote-left']"
                 class="text-white text-4xl"
@@ -28,7 +28,7 @@
                 </div>
             </div>
         </swiper-slide>
-        <swiper-slide class="testimonials pt-20 px-20 pb-14 bg-red-600">
+        <swiper-slide class="testimonials pt-20 px-20 pb-14">
             <font-awesome-icon
                 :icon="['fas', 'quote-left']"
                 class="text-white text-4xl"

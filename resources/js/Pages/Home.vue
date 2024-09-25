@@ -1,6 +1,7 @@
 <script setup>
 import Swiper from "../components/Swiper.vue";
 import Testimonials from "../components/Testimonials.vue";
+import UpCommingEvent from "../components/UpCommingEvent.vue";
 </script>
 <template>
     <!-- head imported globally inside app.js -->
@@ -39,7 +40,8 @@ import Testimonials from "../components/Testimonials.vue";
                 vitae dicta suntes explicabo. Nemo enim ipsam voluptatem
             </p>
             <button
-                class="mt-8 bg-theme-red text-white px-8 py-2 rounded-full font-medium hover:bg-red-800">
+                class="mt-8 bg-theme-red text-white px-8 py-2 rounded-full font-medium hover:bg-red-800"
+            >
                 Read More
             </button>
         </div>
@@ -128,10 +130,19 @@ import Testimonials from "../components/Testimonials.vue";
         </div>
     </div>
 
+    <UpCommingEvent />
+
     <div class="video-testimonials-wrapper flex my-20">
-        <div class="video basis-full">
-            Video Playerl 
-        </div>
+        <iframe
+            width="100%"
+            height="400vh"
+            src="https://www.youtube.com/embed/S1dNuCG3sOA"
+            title="ENGLISH SPEECH | BARACK OBAMA: The People of India (English Subtitles)"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+        ></iframe>
         <Testimonials />
     </div>
 
