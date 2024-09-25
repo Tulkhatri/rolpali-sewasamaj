@@ -64,6 +64,10 @@ img {
   z-index: -2;
 }
 
+.custom-shadow {
+  box-shadow: inset 0px 0px 2px rgba(49, 49, 49, 0.5);
+}
+
 .swiper-slide .swiper-button-prev:after,
 .swiper-slide .swiper-button-next:after {
   background: red;
@@ -199,4 +203,22 @@ img {
   top: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: -1;
+}
+
+.latest-event {
+  position: relative;
+}
+.latest-event::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  width: 5px;
+  height: 100%;
+  background: red;
+  transition: 0.4s ease-in-out;
+}
+.latest-event:hover::after {
+  height: 20%;
+  transition: 0.4s ease-in-out;
 }/*# sourceMappingURL=common.css.map */
