@@ -1,4 +1,5 @@
 <script setup>
+import Donation from "../components/Donation/Donation.vue";
 import Swiper from "../components/Swiper.vue";
 import Testimonials from "../components/Testimonials.vue";
 import UpCommingEvent from "../components/UpCommingEvent.vue";
@@ -132,7 +133,7 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
 
     <UpCommingEvent />
 
-    <div class="video-testimonials-wrapper flex my-20">
+    <div class="video-testimonials-wrapper flex mt-20">
         <iframe
             width="100%"
             height="400vh"
@@ -146,6 +147,8 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
         <Testimonials />
     </div>
 
+    <Donation />
+
     <!-- refresh page but doesnot go at top use preserve-scroll -->
-    <Link class="mt-[600px] block" href="/" preserve-scroll>Refresh</Link>
+    <!-- <Link class="mt-[600px] block" href="/" preserve-scroll>Refresh</Link> -->
 </template>

@@ -135,6 +135,19 @@ img {
     }
 }
 
+.horizontal-line-ourvision {
+    position: relative;
+    &:after {
+        position: absolute;
+        top: 0.8rem;
+        left: 5rem;
+        content: "";
+        width: 5rem;
+        height: 0.1rem;
+        background: red;
+    }
+}
+
 .mission-area,
 .upcomming-event {
     .title-section {
