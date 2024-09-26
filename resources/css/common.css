@@ -130,6 +130,19 @@ img {
   background: red;
 }
 
+.horizontal-line-ourvision {
+  position: relative;
+}
+.horizontal-line-ourvision:after {
+  position: absolute;
+  top: 0.8rem;
+  left: 5rem;
+  content: "";
+  width: 5rem;
+  height: 0.1rem;
+  background: red;
+}
+
 .mission-area .title-section,
 .upcomming-event .title-section {
   position: relative;

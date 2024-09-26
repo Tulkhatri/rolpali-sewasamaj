@@ -8,3 +8,4 @@ Route::get('/', function () {
     return Inertia::render('Home');
 })->name('home');
 Route::inertia('/about', 'About')->name('about');
+Route::inertia('/donation', 'Donation')->name('donation');
