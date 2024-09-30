@@ -58,10 +58,10 @@ import { Link } from "@inertiajs/vue3";
                     <Link :href="route('donation')">Donation</Link>
                 </li>
                 <li class="px-3 py-2 hover:bg-red-400 hover:px-3 hover:rounded-sm">
-                    <Link :href="route('about')">Gallery</Link>
+                    <Link :href="route('gallery')">Gallery</Link>
                 </li>
                 <li class="px-3 py-2 hover:bg-red-400 hover:px-3 hover:rounded-sm">
-                    <Link :href="route('about')">Event</Link>
+                    <Link :href="route('event')">Event</Link>
                 </li>
                 <li class="px-3 py-2 hover:bg-red-400 hover:px-3 hover:rounded-sm">
                     <Link :href="route('about')">News</Link>

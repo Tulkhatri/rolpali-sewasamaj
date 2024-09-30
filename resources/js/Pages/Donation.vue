@@ -4,7 +4,7 @@ import PageHeader from "../components/PageHeader.vue";
 </script>
 <template>
     <!-- head imported globally inside app.js -->
-    <Head title="About"></Head>
+    <Head title="Donation"></Head>
     <PageHeader pageheader="Donation" />
     <Donation />
 </template>
