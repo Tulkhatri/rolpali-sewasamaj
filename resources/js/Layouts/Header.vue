@@ -64,10 +64,10 @@ import { Link } from "@inertiajs/vue3";
                     <Link :href="route('event')">Event</Link>
                 </li>
                 <li class="px-3 py-2 hover:bg-red-400 hover:px-3 hover:rounded-sm">
-                    <Link :href="route('about')">News</Link>
+                    <Link :href="route('news')">News</Link>
                 </li>
                 <li class="px-3 py-2 hover:bg-red-400 hover:px-3 hover:rounded-sm">
-                    <Link :href="route('about')">Contact</Link>
+                    <Link :href="route('contactus')">Contact</Link>
                 </li>
             </ul>
             <div class="right-button flex">
