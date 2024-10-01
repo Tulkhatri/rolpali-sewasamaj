@@ -11,3 +11,5 @@ Route::inertia('/about', 'About')->name('about');
 Route::inertia('/donation', 'Donation')->name('donation');
 Route::inertia('/gallery', 'Gallery')->name('gallery');
 Route::inertia('/event', 'Event')->name('event');
+Route::inertia('/news', 'News')->name('news');
+Route::inertia('/contactus', 'ContactUs')->name('contactus');
