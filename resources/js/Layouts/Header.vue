@@ -1,5 +1,7 @@
 <script setup>
-import { Link } from "@inertiajs/vue3";
+import { Link, usePage } from "@inertiajs/vue3";
+
+const page = usePage(); // Get the whole page object
 </script>
 
 <template>
@@ -45,36 +47,37 @@ import { Link } from "@inertiajs/vue3";
         </div>
     </div>
 
-    <header class="bg-theme-red pr-56 pl-52 sticky top-0 z-10">
+    <header class="bg-theme-red pr-56 pl-52 sticky top-0 z-20">
         <nav class="flex justify-between items-center">
             <ul class="flex font-semibold text-white">
-                <li class="px-3 py-2 hover:bg-red-400 hover:px-3 hover:rounded-sm">
+                <li :class="['px-3 py-2 hover:bg-red-400 hover:rounded-md transition-all duration-300 ease-in-out', page.component === 'Home' ? 'active' : '']">
                     <Link :href="route('home')">Home</Link>
                 </li>
-                <li class="px-3 py-2 hover:bg-red-400 hover:px-3 hover:rounded-sm">
+                <li :class="['px-3 py-2 hover:bg-red-400 hover:rounded-md transition-all duration-300 ease-in-out', page.component === 'About' ? 'active' : '']">
                     <Link :href="route('about')">About Us</Link>
                 </li>
-                <li class="px-3 py-2 hover:bg-red-400 hover:px-3 hover:rounded-sm">
+                <li :class="['px-3 py-2 hover:bg-red-400 hover:rounded-md transition-all duration-300 ease-in-out', page.component === 'Donation' ? 'active' : '']">
                     <Link :href="route('donation')">Donation</Link>
                 </li>
-                <li class="px-3 py-2 hover:bg-red-400 hover:px-3 hover:rounded-sm">
+                <li :class="['px-3 py-2 hover:bg-red-400 hover:rounded-md transition-all duration-300 ease-in-out', page.component === 'Gallery' ? 'active' : '']">
                     <Link :href="route('gallery')">Gallery</Link>
                 </li>
-                <li class="px-3 py-2 hover:bg-red-400 hover:px-3 hover:rounded-sm">
+                <li :class="['px-3 py-2 hover:bg-red-400 hover:rounded-md transition-all duration-300 ease-in-out', page.component === 'Event' ? 'active' : '']">
                     <Link :href="route('event')">Event</Link>
                 </li>
-                <li class="px-3 py-2 hover:bg-red-400 hover:px-3 hover:rounded-sm">
+                <li :class="['px-3 py-2 hover:bg-red-400 hover:rounded-md transition-all duration-300 ease-in-out', page.component === 'News' ? 'active' : '']">
                     <Link :href="route('news')">News</Link>
                 </li>
-                <li class="px-3 py-2 hover:bg-red-400 hover:px-3 hover:rounded-sm">
+                <li :class="['px-3 py-2 hover:bg-red-400 hover:rounded-md transition-all duration-300 ease-in-out', page.component === 'ContactUs' ? 'active' : '']">
                     <Link :href="route('contactus')">Contact</Link>
                 </li>
             </ul>
+
             <div class="right-button flex">
-                <div class="bg-white text-red-600 m-4 px-6 py-1.5 rounded-3xl hover:bg-red-700 hover:text-white">
+                <div class="custom-slider-top-button bg-white text-red-600 m-4 px-6 py-1.5 rounded-3xl">
                     <Link :href="route('about')">Donate Now</Link>
                 </div>
-                <div class="bg-white text-red-600 m-4 px-6 py-1.5 rounded-3xl hover:bg-red-700 hover:text-white">
+                <div class="custom-slider-top-button bg-white text-red-600 m-4 px-6 py-1.5 rounded-3xl">
                     <Link :href="route('about')">Join Now</Link>
                 </div>
             </div>

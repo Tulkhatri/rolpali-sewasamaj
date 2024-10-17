@@ -33,6 +33,11 @@
   background: #eb1b2b;
 }
 
+.active {
+  background: #fd7a7a;
+  border-radius: 0.2rem;
+}
+
 .swiper-slide img {
   width: 100%;
   height: 79vh;
@@ -234,4 +239,96 @@ img {
 .latest-event:hover::after {
   height: 20%;
   transition: 0.4s ease-in-out;
+}
+
+.custom-slider-button {
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
+}
+.custom-slider-button:active::after {
+  position: absolute;
+  content: "";
+  background: #fcc7c7;
+  transition: 0.5s;
+  border-radius: 3rem;
+}
+.custom-slider-button:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 0;
+  background: #fff;
+  transition: 0.5s;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  border-radius: 30px;
+}
+.custom-slider-button:hover {
+  background: #fff;
+  color: #eb1b2b;
+}
+.custom-slider-button:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.custom-slider-top-button {
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
+}
+.custom-slider-top-button:active::after {
+  position: absolute;
+  content: "";
+  background: #ed6363;
+  transition: 0.5s;
+  border-radius: 3rem;
+}
+.custom-slider-top-button:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 0;
+  background: #af1e2a;
+  transition: 0.5s;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  border-radius: 30px;
+}
+.custom-slider-top-button:hover {
+  color: #fff;
+  background: #eb1b2b;
+}
+.custom-slider-top-button:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.custom-slider {
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
+}
+.custom-slider:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 0;
+  background: #fff;
+  transition: 0.5s;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  border-radius: 3rem;
+}
+.custom-slider:hover {
+  background: #fff;
+  color: #eb1b2b;
+}
+.custom-slider:hover:after {
+  width: 100%;
+  left: 0;
 }/*# sourceMappingURL=common.css.map */

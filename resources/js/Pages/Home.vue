@@ -1,4 +1,5 @@
 <script setup>
+import CountDown from "../components/CountDown.vue";
 import Donation from "../components/Donation/Donation.vue";
 import Swiper from "../components/Swiper.vue";
 import Testimonials from "../components/Testimonials.vue";
@@ -25,8 +26,13 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
         </div>
         <div class="right-sec basis-1/2 ml-14">
             <h4 class="horizontal-line">Why choose us</h4>
-            <h1 class="mt-8 text-3xl">Leadership is the trusted</h1>
-            <h1 class="text-3xl">& powerful political team.</h1>
+            <h1 class="mt-8 text-3xl font-medium">
+                Heading title title title title title
+            </h1>
+            <h1 class="text-3xl font-medium">
+                Heading title title
+                <span class="text-red-600">title title title</span>
+            </h1>
             <p class="mt-8 text-justify">
                 Lorem ipsum dolor sit amet, consectetur adipisicing sed do
                 eiushhgmose tempor incididun ut labore eth dolore magna aliqua.
@@ -40,8 +46,9 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
                 ipsae quae ab illo inventore veritatis et qu architector beatae
                 vitae dicta suntes explicabo. Nemo enim ipsam voluptatem
             </p>
+            <!-- hover:bg-gray-100 hover:text-red-600 -->
             <button
-                class="mt-8 bg-theme-red text-white px-8 py-2 rounded-full font-medium hover:bg-red-800"
+                class="custom-slider-button mt-8 bg-theme-red text-white px-8 py-2 rounded-full font-medium"
             >
                 Read More
             </button>
@@ -56,80 +63,115 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
             <div class="mt-8 w-48 m-auto">
                 <img src="../../assets/images/icon/icon.png" alt="" class="" />
             </div>
-            <p class="text-center mt-2">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam
-            </p>
+            <p class="text-center mt-2">Short text about mission .........</p>
         </div>
-        <div class="mission-row mt-10 px-56 flex items-center">
-            <div class="mission-container basis-1/3">
-                <div class="image-wrapper">
-                    <img src="../../assets/images/swiper/slider3.jpeg" alt="" />
+        <div class="mission-row mt-10 px-56 flex items-center gap-5">
+            <div class="mission-container basis-[32%] relative group">
+                <div class="mission-wrapper">
+                    <div class="image-wrapper">
+                        <img
+                            src="../../assets/images/swiper/slider3.jpeg"
+                            alt=""
+                        />
+                    </div>
+                    <div
+                        class="title-detail-wrapper py-6 px-4 bg-white text-center"
+                    >
+                        <h1 class="text-xl font-medium">
+                            Mission Title...........
+                        </h1>
+                        <p class="mt-2">
+                            Mission Detail Mission DetailMission DetailMission
+                            DetailMission DetailMission DetailMission
+                            DetailMission Detail
+                        </p>
+                    </div>
                 </div>
-                <div
-                    class="title-detail-wrapper py-6 px-4 bg-white text-center"
-                >
-                    <h1 class="text-xl font-medium">Our Campaign</h1>
-                    <p class="mt-2">
-                        Lorem ipsum dolor sit amet, cata adipisicing morem ipsum
-                        dolor sit amet, cata adipisese elit, sed do eiusmod
-                        temapor
+                <div class="mission-hover py-20 px-5 bg-red-600 text-center text-white absolute left-0 top-0 scale-0 group-hover:scale-100 transition-all duration-500">
+                    <h1 class="text-xl font-medium">
+                        Mission Title...........
+                    </h1>
+                    <p class="my-10">
+                        Mission Detail Mission DetailMission DetailMission
+                        DetailMission DetailMission DetailMission DetailMission
+                        Detail
                     </p>
+                        <Link :href="route('home')" class="py-1 px-10 button-wrapper border-2 border-white rounded-full hover:bg-white hover:text-red-600 hover:transition-all duration-300 ease-in-out">More  <font-awesome-icon :icon="['fas', 'arrow-right']" /></Link>
                 </div>
             </div>
 
-            <div class="mission-container basis-1/3 mx-8">
-                <div class="image-wrapper">
-                    <img src="../../assets/images/swiper/slider3.jpeg" alt="" />
+            <div class="mission-container basis-[32%] relative group">
+                <div class="mission-wrapper">
+                    <div class="image-wrapper">
+                        <img
+                            src="../../assets/images/swiper/slider3.jpeg"
+                            alt=""
+                        />
+                    </div>
+                    <div
+                        class="title-detail-wrapper py-6 px-4 bg-white text-center"
+                    >
+                        <h1 class="text-xl font-medium">
+                            Mission Title...........
+                        </h1>
+                        <p class="mt-2">
+                            Mission Detail Mission DetailMission DetailMission
+                            DetailMission DetailMission DetailMission
+                            DetailMission Detail
+                        </p>
+                    </div>
                 </div>
-                <div
-                    class="title-detail-wrapper py-6 px-4 bg-white text-center"
-                >
-                    <h1 class="text-xl font-medium">Our Campaign</h1>
-                    <p class="mt-2">
-                        Lorem ipsum dolor sit amet, cata adipisicing morem ipsum
-                        dolor sit amet, cata adipisese elit, sed do eiusmod
-                        temapor
+                <div class="mission-hover py-20 px-5 bg-red-600 text-center text-white absolute left-0 top-0 scale-0 group-hover:scale-100 transition-all duration-500">
+                    <h1 class="text-xl font-medium">
+                        Mission Title...........
+                    </h1>
+                    <p class="my-10">
+                        Mission Detail Mission DetailMission DetailMission
+                        DetailMission DetailMission DetailMission DetailMission
+                        Detail
                     </p>
+                        <Link :href="route('home')" class="py-1 px-10 button-wrapper border-2 border-white rounded-full hover:bg-white hover:text-red-600 hover:transition-all duration-300 ease-in-out">More  <font-awesome-icon :icon="['fas', 'arrow-right']" /></Link>
                 </div>
             </div>
 
-            <div class="mission-container basis-1/3">
-                <div class="image-wrapper">
-                    <img src="../../assets/images/swiper/slider3.jpeg" alt="" />
+               <div class="mission-container basis-[32%] relative group">
+                <div class="mission-wrapper">
+                    <div class="image-wrapper">
+                        <img
+                            src="../../assets/images/swiper/slider3.jpeg"
+                            alt=""
+                        />
+                    </div>
+                    <div
+                        class="title-detail-wrapper py-6 px-4 bg-white text-center"
+                    >
+                        <h1 class="text-xl font-medium">
+                            Mission Title...........
+                        </h1>
+                        <p class="mt-2">
+                            Mission Detail Mission DetailMission DetailMission
+                            DetailMission DetailMission DetailMission
+                            DetailMission Detail
+                        </p>
+                    </div>
                 </div>
-                <div
-                    class="title-detail-wrapper py-6 px-4 bg-white text-center"
-                >
-                    <h1 class="text-xl font-medium">Our Campaign</h1>
-                    <p class="mt-2">
-                        Lorem ipsum dolor sit amet, cata adipisicing morem ipsum
-                        dolor sit amet, cata adipisese elit, sed do eiusmod
-                        temapor
+                <div class="mission-hover py-20 px-5 bg-red-600 text-center text-white absolute left-0 top-0 scale-0 group-hover:scale-100 transition-all duration-500">
+                    <h1 class="text-xl font-medium">
+                        Mission Title...........
+                    </h1>
+                    <p class="my-10">
+                        Mission Detail Mission DetailMission DetailMission
+                        DetailMission DetailMission DetailMission DetailMission
+                        Detail
                     </p>
+                        <Link :href="route('home')" class="py-1 px-10 button-wrapper border-2 border-white rounded-full hover:bg-white hover:text-red-600 hover:transition-all duration-300 ease-in-out">More  <font-awesome-icon :icon="['fas', 'arrow-right']" /></Link>
                 </div>
             </div>
+
         </div>
     </div>
 
-    <div class="count-down-area">
-        <div class="mx-56">
-            <h1
-                class="title-section text-3xl text-center font-medium text-white"
-            >
-                Timeline
-            </h1>
-            <div class="mt-8 w-48 m-auto">
-                <img
-                    src="../../assets/images/icon/timiline.png"
-                    alt=""
-                    class=""
-                />
-            </div>
-
-            <h5 class="text-xl text-center text-white">..</h5>
-        </div>
-    </div>
+   <CountDown />
 
     <UpCommingEvent />
 

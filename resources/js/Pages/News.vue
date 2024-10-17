@@ -16,14 +16,16 @@ import PageHeader from "../components/PageHeader.vue";
         <div
             class="upcomming-event-row mt-10 px-56 flex items-center gap-5 flex-wrap"
         >
-            <div class="mission-container basis-[32%]">
-                <div class="image-wrapper">
+            <div class="mission-container basis-[32%] group">
+                <div class="image-wrapper relative">
                     <img src="../../assets/images/swiper/slider3.jpeg" alt="" />
+                     <!-- Overlay background color on hover -->
+                     <div class="absolute inset-x-0 bottom-0 h-0 group-hover:h-full bg-[rgba(29,37,55,0.8)] transition-all duration-300 ease-in-out"></div>
                 </div>
                 <div
                     class="title-detail-wrapper py-6 px-4 bg-white custom-shadow"
                 >
-                    <h1 class="text-xl font-medium">Our Campaign</h1>
+                    <h1 class="text-xl font-medium group-hover:text-red-600">Our Campaign</h1>
                     <p class="mt-2">
                         Lorem ipsum dolor sit amet, cata adipisicing morem ipsum
                         dolor sit amet, cata adipisese elit, sed do eiusmod
@@ -38,14 +40,16 @@ import PageHeader from "../components/PageHeader.vue";
                     10-jun-2024
                 </h1>
             </div>
-            <div class="mission-container basis-[32%]">
-                <div class="image-wrapper">
+            <div class="mission-container basis-[32%] group">
+                <div class="image-wrapper relative">
                     <img src="../../assets/images/swiper/slider3.jpeg" alt="" />
+                     <!-- Overlay background color on hover -->
+                     <div class="absolute inset-x-0 bottom-0 h-0 group-hover:h-full bg-[rgba(29,37,55,0.8)] transition-all duration-300 ease-in-out"></div>
                 </div>
                 <div
                     class="title-detail-wrapper py-6 px-4 bg-white custom-shadow"
                 >
-                    <h1 class="text-xl font-medium">Our Campaign</h1>
+                    <h1 class="text-xl font-medium group-hover:text-red-600">Our Campaign</h1>
                     <p class="mt-2">
                         Lorem ipsum dolor sit amet, cata adipisicing morem ipsum
                         dolor sit amet, cata adipisese elit, sed do eiusmod
@@ -60,14 +64,16 @@ import PageHeader from "../components/PageHeader.vue";
                     10-jun-2024
                 </h1>
             </div>
-            <div class="mission-container basis-[32%]">
-                <div class="image-wrapper">
+            <div class="mission-container basis-[32%] group">
+                <div class="image-wrapper relative">
                     <img src="../../assets/images/swiper/slider3.jpeg" alt="" />
+                     <!-- Overlay background color on hover -->
+                     <div class="absolute inset-x-0 bottom-0 h-0 group-hover:h-full bg-[rgba(29,37,55,0.8)] transition-all duration-300 ease-in-out"></div>
                 </div>
                 <div
                     class="title-detail-wrapper py-6 px-4 bg-white custom-shadow"
                 >
-                    <h1 class="text-xl font-medium">Our Campaign</h1>
+                    <h1 class="text-xl font-medium group-hover:text-red-600">Our Campaign</h1>
                     <p class="mt-2">
                         Lorem ipsum dolor sit amet, cata adipisicing morem ipsum
                         dolor sit amet, cata adipisese elit, sed do eiusmod
