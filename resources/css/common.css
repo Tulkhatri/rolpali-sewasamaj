@@ -38,6 +38,11 @@
   border-radius: 0.2rem;
 }
 
+.active-mobile {
+  background: #fcd0d0;
+  border-radius: 0.2rem;
+}
+
 .swiper-slide img {
   width: 100%;
   height: 79vh;
@@ -331,4 +336,33 @@ img {
 .custom-slider:hover:after {
   width: 100%;
   left: 0;
+}
+
+.menu_responsive {
+  position: absolute;
+  top: 4rem;
+  width: 100%;
+  flex-direction: column;
+  background: #fff;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.menu_responsive.open {
+  height: 500px;
+  overflow: visible;
+}
+.menu_responsive .list_item {
+  padding: 0;
+  border-radius: 0;
+  border-bottom: 1px solid black;
+}
+.menu_responsive .list_item a {
+  display: block;
+  padding: 1rem;
+  color: #000;
+}
+
+.hamburger_menu {
+  cursor: pointer;
 }/*# sourceMappingURL=common.css.map */

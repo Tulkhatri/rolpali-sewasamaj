@@ -16,7 +16,7 @@ import PageHeader from '../components/PageHeader.vue';
     },
   }"
 >
-<div class="flex items-center my-20 mx-56 gap-5">
+<div class="flex items-center my-20 mx-5 lg:mx-56 gap-5">
   <a data-fancybox="gallery" href="https://lipsum.app/id/60/1600x1200">
     <img src="https://lipsum.app/id/60/200x150"/>
   </a>

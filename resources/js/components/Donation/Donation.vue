@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
    <div class="mission-area bg-gray-100 py-20">
-        <div class="mx-56">
+    <div class="mx-5 lg:mx-56">
             <h1 class="title-section text-3xl text-center font-medium">
                 Donation
             </h1>
@@ -10,8 +10,8 @@
             </div>
             <p class="text-center mt-2">Donation details..........</p>
         </div>
-        <div class="mission-row mt-10 px-56 flex items-center flex-wrap gap-5">
-            <div class="mission-container basis-[31%] relative group">
+        <div class="mission-row mt-10 px-5 lg:px-56 flex flex-col lg:flex-row items-center flex-wrap gap-5">
+            <div class="mission-container w-full lg:basis-[31%] relative group">
                 <div class="">
                     <div class="image-wrapper">
                         <img src="../../../assets/images/swiper/slider3.jpeg" alt="" class="h-48"/>
@@ -31,7 +31,7 @@
                 </div>
         </div>
 
-        <div class="mission-container basis-[31%] relative group">
+        <div class="mission-container w-full lg:basis-[31%] relative group">
                 <div class="">
                     <div class="image-wrapper">
                         <img src="../../../assets/images/swiper/slider3.jpeg" alt="" class="h-48"/>
@@ -51,7 +51,7 @@
                 </div>
         </div>
 
-        <div class="mission-container basis-[31%] relative group">
+        <div class="mission-container w-full lg:basis-[31%] relative group">
                 <div class="">
                     <div class="image-wrapper">
                         <img src="../../../assets/images/swiper/slider3.jpeg" alt="" class="h-48"/>
