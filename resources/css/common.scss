@@ -35,6 +35,10 @@
     background: #fd7a7a;
     border-radius: 0.2rem;
 }
+.active-mobile {
+    background: #fcd0d0;
+    border-radius: 0.2rem;
+}
 .swiper-slide {
     img {
         width: 100%;
@@ -343,3 +347,37 @@ img {
         }
     }
 }
+
+.menu_responsive {
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+    flex-direction: column;
+    background: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+
+    &.open {
+        height: 500px; // Adjust height based on your needs
+        overflow: visible;
+    }
+
+    .list_item {
+        padding: 0;
+        border-radius: 0;
+        border-bottom: 1px solid black;
+
+        a {
+            display: block;
+            padding: 1rem;
+            color: #000;
+        }
+    }
+}
+
+.hamburger_menu {
+    cursor: pointer;
+
+}
+

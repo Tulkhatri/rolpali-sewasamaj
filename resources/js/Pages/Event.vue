@@ -6,7 +6,7 @@ import PageHeader from "../components/PageHeader.vue";
     <Head title="Events"></Head>
     <PageHeader pageheader="Events" />
         <div class="upcomming-event bg-white py-20">
-            <div class="mx-56">
+            <div class="mx-5 lg:mx-56">
                 <h1 class="title-section text-3xl text-center font-medium">
                     Up Comming Events
                 </h1>
@@ -18,12 +18,11 @@ import PageHeader from "../components/PageHeader.vue";
                     />
                 </div>
                 <p class="text-center mt-2">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam
+                    Together for Change: Join Us in Making a Difference!
                 </p>
             </div>
             <div
-                class="upcomming-event-row mt-10 px-56 flex items-center gap-5 flex-wrap">
+                class="upcomming-event-row mt-10 px-5 flex flex-col lg:flex-row items-center gap-5 lg:px-56">
                 <div class="mission-container basis-[31%] group">
                     <div class="image-wrapper relative">
                         <img

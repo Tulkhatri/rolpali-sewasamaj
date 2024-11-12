@@ -6,7 +6,7 @@ import PageHeader from "../components/PageHeader.vue";
     <Head title="News"></Head>
     <PageHeader pageheader="Contact Us" />
     <div class="upcomming-event bg-slate-100 py-20">
-        <div class="mx-56">
+        <div class="mx-5 lg:mx-56">
             <h1 class="title-section text-3xl text-center font-medium">
                 Contact Us
             </h1>
@@ -17,7 +17,7 @@ import PageHeader from "../components/PageHeader.vue";
                 Contact us.............................
             </p>
         </div>
-        <div class="upcomming-event-row mt-10 px-56">
+        <div class="upcomming-event-row mt-10 mx-5 lg:px-56">
             <div class="row-wrapper mt-5 flex justify-between items-center gap-5">
                 <div class="basis-1/2">
                     <input
@@ -66,8 +66,8 @@ import PageHeader from "../components/PageHeader.vue";
             </button>
         </div>
 
-        <div class="contact-section flex justify-start items-center gap-5 mx-56 my-10">
-            <div class="left-section custom-shadow basis-1/3 p-5">
+        <div class="contact-section flex flex-col lg:flex-row justify-start items-center gap-5 mx-5 lg:mx-56 my-10">
+            <div class="left-section custom-shadow w-full lg:basis-1/3 p-5">
                 <div class="icon-text-wrapper flex justify-start items-center gap-5">
                     <font-awesome-icon :icon="['fas', 'location-dot']" 
                       class="cursor-pointer bg-theme-red text-white p-1.5 rounded-md"
@@ -97,7 +97,7 @@ import PageHeader from "../components/PageHeader.vue";
                     </div>
                 </div>
             </div>
-            <div class="map-section basis-2/3">
+            <div class="map-section w-full lg:basis-2/3">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224774.71527278595!2d82.48828492260624!3d28.325426185879838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3997dce8b5f225f9%3A0x1f7b90a4f99eecf1!2sRolpa!5e0!3m2!1sen!2snp!4v1727746903753!5m2!1sen!2snp" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>

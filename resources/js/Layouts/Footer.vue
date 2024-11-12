@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
     <div class="bg-slate-800">
-        <div class="flex mx-56 py-20 gap-5">
+        <div class="flex flex-col lg:flex-row mx-5 lg:mx-56 py-20 gap-5">
             <div class="footer-address-wrapper basis-1/4 text-white">
                 <h2 class="font-bold text-lg">Contact Info</h2>
                 <p class="my-5">
@@ -133,7 +133,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-black px-56 py-5 flex justify-between">
+    <div class="bg-black px-5 lg:px-56 py-5 flex justify-between flex-col md:flex-row">
         <h1 class="text-white">
             @2024 Rolpali Sewasamaj Rolpa All Right Reserved.
         </h1>
