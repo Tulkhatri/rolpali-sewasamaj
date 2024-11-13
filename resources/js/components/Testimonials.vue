@@ -16,15 +16,14 @@
                 class="text-white text-4xl"
             />
             <p class="text-white mt-10">
-                Voluptatem ac doloremque laudantium, totam rem aperiam, eaque
-                ipsae quae ab illo inventore veritatis et qu architector beatae
-                vitae dicta suntes explicabo. Nemo enim ipsam voluptatem
+                Rolpali Sewa Samaj is a beacon of hope in Nepal, providing essential support and empowerment
+                 to underprivileged and differently-abled individuals. Their compassionate work is truly inspiring.
             </p>
             <div class="image-wrapper mt-8 flex items-center gap-5">
                 <img src="../../assets/images/swiper/slider2.jpg" alt="" />
                 <div class="name-designation text-white">
-                    <p class="font-bold">Tul Bahadur Khatri</p>
-                    <p>Software Engineer</p>
+                    <p class="font-bold whitespace-nowrap">Tul Bahadur Khatri</p>
+                    <p class="whitespace-nowrap">Software Engineer</p>
                 </div>
             </div>
         </swiper-slide>
@@ -34,9 +33,8 @@
                 class="text-white text-4xl"
             />
             <p class="text-white mt-10">
-                Voluptatem ac doloremque laudantium, totam rem aperiam, eaque
-                ipsae quae ab illo inventore veritatis et qu architector beatae
-                vitae dicta suntes explicabo. Nemo enim ipsam voluptatem
+                Rolpali Sewa Samaj is a beacon of hope in Nepal, providing essential support and empowerment to
+                underprivileged and differently-abled individuals. Their compassionate work is truly inspiring.
             </p>
             <div class="image-wrapper mt-8 flex items-center gap-5">
                 <img src="../../assets/images/swiper/slider2.jpg" alt="" />

@@ -100,6 +100,9 @@ img {
   color: black !important;
 }
 
+.swiper-testimonials {
+  width: 100%;
+}
 .swiper-testimonials .swiper-button-prev:after,
 .swiper-testimonials .swiper-button-next:after {
   border: 1px solid white;

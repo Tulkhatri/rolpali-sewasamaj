@@ -2,10 +2,11 @@
 <template>
     <div class="bg-slate-800">
         <div class="flex flex-col lg:flex-row mx-5 lg:mx-56 py-20 gap-5">
-            <div class="footer-address-wrapper basis-1/4 text-white">
+            <div class="footer-address-wrapper basis-1/3 text-white">
                 <h2 class="font-bold text-lg">Contact Info</h2>
                 <p class="my-5">
-                    Rolpa Rolpa Rolpa Rolpa Rolpa Rolpa Rolpa Rolpa Rolpa
+                    Empowering Disabled and Underprivileged
+                    Individuals in Rolpa and Across Nepal.
                 </p>
                 <div class="icon-text">
                     <font-awesome-icon
@@ -22,42 +23,42 @@
                         :icon="['far', 'envelope']"
                         class="mr-3"
                     />
-                    <span>tulb.khatri@gmail.com</span>
+                    <span>rolpalisewasamajrolpa@gmail.com</span>
                 </div>
             </div>
 
-            <div class="footer-address-wrapper basis-1/4 text-white">
+            <div class="footer-address-wrapper basis-1/3 text-white">
                 <h2 class="font-bold text-lg">Quick Link</h2>
                 <ul class="link-wrapper my-5">
                     <li class="my-4">
-                        <a href="" class="hover:underline hover:text-blue-400"
-                            >Hamro sewa samaj Rolpa</a
+                        <a href="https://www.facebook.com/profile.php?id=100089722701713" class="hover:underline hover:text-blue-400"
+                        target= "_blank">Rolpali sewa samaj Rolpa</a
+                        >
+                    </li>
+                    <li class="my-4">
+                        <a href="https://www.facebook.com/RolpainUAE" class="hover:underline hover:text-blue-400"
+                        target= "_blank">Rolpali sewa samaj UAE</a
+                        >
+                    </li>
+                    <li class="my-4">
+                        <a href="https://www.facebook.com/profile.php?id=61557994860297" class="hover:underline hover:text-blue-400"
+                        target= "_blank">Rolpali sewa samaj Portugal</a
                         >
                     </li>
                     <li class="my-4">
                         <a href="" class="hover:underline hover:text-blue-400"
-                            >Rolpali sewa samaj UAE</a
+                        target= "_blank">Rolpali sewa samaj Dang</a
                         >
                     </li>
                     <li class="my-4">
                         <a href="" class="hover:underline hover:text-blue-400"
-                            >Rolpali sewa samaj India</a
-                        >
-                    </li>
-                    <li class="my-4">
-                        <a href="" class="hover:underline hover:text-blue-400"
-                            >Rolpali sewa samaj Dang</a
-                        >
-                    </li>
-                    <li class="my-4">
-                        <a href="" class="hover:underline hover:text-blue-400"
-                            >Rolpali sewa samaj Kathmandu</a
+                        target= "_blank">Rolpali sewa samaj Kathmandu</a
                         >
                     </li>
                 </ul>
             </div>
 
-            <div class="footer-address-wrapper basis-1/4 text-white">
+            <!-- <div class="footer-address-wrapper basis-1/3 text-white">
                 <h2 class="font-bold text-lg">Popular Post</h2>
                 <a href="" class="icon-text mt-5 flex items-center gap-5 hover:text-blue-300">
                     <div class="image-wrapper basis-1/2">
@@ -68,7 +69,7 @@
                         />
                     </div>
                     <div class="text-wrapper">
-                        <p>Your Small Business Web Design Solution.</p>
+                        <p>Post Title Dummy Data</p>
                         <h5 class="text-sm">May 16, 2024</h5>
                     </div>
                 </a>
@@ -81,7 +82,7 @@
                         />
                     </div>
                     <div class="text-wrapper">
-                        <p>Your Small Business Web Design Solution.</p>
+                        <p>Post Title Dummy Data</p>
                         <h5 class="text-sm">May 20, 2024</h5>
                     </div>
                 </a>
@@ -94,13 +95,13 @@
                         />
                     </div>
                     <div class="text-wrapper">
-                        <p>Your Small Business Web Design Solution.</p>
+                        <p>Post Title Dummy Data</p>
                         <h5 class="text-sm">May 30, 2024</h5>
                     </div>
                 </a>
-            </div>
+            </div> -->
 
-            <div class="footer-address-wrapper basis-1/4">
+            <div class="footer-address-wrapper basis-1/3">
                 <h2 class="text-white font-bold text-lg">Contact Us</h2>
 
                 <div class="mt-5">

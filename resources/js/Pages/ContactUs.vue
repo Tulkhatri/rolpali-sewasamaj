@@ -14,7 +14,7 @@ import PageHeader from "../components/PageHeader.vue";
                 <img src="../../assets/images/icon/icon.png" alt="" class="" />
             </div>
             <p class="text-center mt-2">
-                Contact us.............................
+                Get in touch with Rolpali Sewa Samaj – we are here to help, support, and connect with our community. Reach out today!
             </p>
         </div>
         <div class="upcomming-event-row mt-10 mx-5 lg:px-56">
@@ -82,8 +82,8 @@ import PageHeader from "../components/PageHeader.vue";
                         class="cursor-pointer bg-theme-red text-white p-1.5 rounded-md"
                     />
                     <div class="text-wrapper">
-                        <h1>9847862779</h1>
-                        <h1>9847862779</h1>
+                        <h1>9847800000</h1>
+                        <h1>9847800000</h1>
                     </div>
                 </div>
                 <div class="icon-text-wrapper flex justify-start items-center gap-5">
@@ -92,8 +92,8 @@ import PageHeader from "../components/PageHeader.vue";
                         class="cursor-pointer bg-theme-red text-white p-1.5 rounded-md"
                     />
                     <div class="text-wrapper">
-                        <h1>tulb.khatri@gmail.com</h1>
-                        <h1>tulb.khatri@gmail.com</h1>
+                        <h1>rolpalisewasamajrolpa@gmail.com</h1>
+                        <h1>rolpalisewasamaj@gmail.com</h1>
                     </div>
                 </div>
             </div>

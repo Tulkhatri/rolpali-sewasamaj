@@ -8,17 +8,17 @@
             <div class="mt-8 w-48 m-auto">
                 <img src="../../../assets/images/icon/icon.png" alt="" class="" />
             </div>
-            <p class="text-center mt-2">Donation details..........</p>
+            <p class="text-center mt-2">Give a little, change a lot. Your donation can bring hope and change lives.</p>
         </div>
         <div class="mission-row mt-10 px-5 lg:px-56 flex flex-col lg:flex-row items-center flex-wrap gap-5">
             <div class="mission-container w-full lg:basis-[31%] relative group">
                 <div class="">
                     <div class="image-wrapper">
-                        <img src="../../../assets/images/swiper/slider3.jpeg" alt="" class="h-48"/>
+                        <img src="../../../assets/images/bloodnation.jpg" alt="" class="h-48"/>
                     </div>
                     <div class="title-detail-wrapper py-6 px-4 bg-white">
-                        <h1 class="text-xl font-medium">Donation1</h1>
-                        <p class="mt-2">Text something here....................</p>
+                        <h1 class="text-xl font-medium">Donation Dummy</h1>
+                        <p class="mt-2">Donate today, and be the light in someone’s life.</p>
                         <div class="w-full h-[5px] bg-red-300 rounded-3xl my-1">
                             <div class="w-1/2 h-[5px] bg-red-500 rounded-3xl"></div>
                         </div>
@@ -34,11 +34,11 @@
         <div class="mission-container w-full lg:basis-[31%] relative group">
                 <div class="">
                     <div class="image-wrapper">
-                        <img src="../../../assets/images/swiper/slider3.jpeg" alt="" class="h-48"/>
+                        <img src="../../../assets/images/donate2.jpg" alt="" class="h-48"/>
                     </div>
                     <div class="title-detail-wrapper py-6 px-4 bg-white">
-                        <h1 class="text-xl font-medium">Donation2</h1>
-                        <p class="mt-2">Text something here....................</p>
+                        <h1 class="text-xl font-medium">Donation Dummy</h1>
+                        <p class="mt-2">Donate today, and be the light in someone’s life.</p>
                         <div class="w-full h-[5px] bg-red-300 rounded-3xl my-1">
                             <div class="w-1/2 h-[5px] bg-red-500 rounded-3xl"></div>
                         </div>
@@ -54,11 +54,11 @@
         <div class="mission-container w-full lg:basis-[31%] relative group">
                 <div class="">
                     <div class="image-wrapper">
-                        <img src="../../../assets/images/swiper/slider3.jpeg" alt="" class="h-48"/>
+                        <img src="../../../assets/images/emporing.jpg" alt="" class="h-48"/>
                     </div>
                     <div class="title-detail-wrapper py-6 px-4 bg-white">
-                        <h1 class="text-xl font-medium">Donation3</h1>
-                        <p class="mt-2">Text something here....................</p>
+                        <h1 class="text-xl font-medium">Donation Dummy</h1>
+                        <p class="mt-2">Donate today, and be the light in someone’s life.</p>
                         <div class="w-full h-[5px] bg-red-300 rounded-3xl my-1">
                             <div class="w-1/2 h-[5px] bg-red-500 rounded-3xl"></div>
                         </div>
