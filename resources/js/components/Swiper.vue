@@ -5,13 +5,20 @@
         :loop="true"
         :autoplay="{ delay: 2000, disableOnInteraction: false }"
         :speed="1500"
+        
+        :breakpoints="{
+        // 640: { slidesPerView: 1 },
+        // 768: { slidesPerView: 2 },
+        // 1024: { slidesPerView: 3 }
+         }"
+
         navigation
         @swiper="onSwiper"
         @slideChange="onSlideChange"
         class="swiper-slide"
     >
         <swiper-slide class="swiper-slide h-[35vh] md:h-[73vh]">
-            <img src="../../assets/images/swiper/slider1.jpeg" alt="" class="w-full" />
+            <img src="../../assets/images/donate1.jpg" alt="" class="w-full" />
             <div class="absolute inset-0 bg-sky-600/30"></div>
             <div class="absolute bottom-5 md:bottom-32 left-5 lg:left-56 text-white">
                 <h2 class="text-2xl mb-5">Need assistance? We're here to help</h2>
@@ -24,7 +31,7 @@
             </div>
         </swiper-slide>
         <swiper-slide class="swiper-slide h-[35vh] md:h-[73vh]">
-            <img src="../../assets/images/swiper/slider3.jpeg" alt="" class="w-full"/>
+            <img src="../../assets/images/emporing.jpg" alt="" class="w-full"/>
             <div class="absolute inset-0 bg-sky-600/30"></div>
             <div class="absolute bottom-5 md:bottom-32 left-5 lg:left-56 text-white">
                 <h2 class="text-2xl mb-5">Need assistance? We're here to help</h2>
@@ -37,7 +44,7 @@
             </div>
         </swiper-slide>
         <swiper-slide class="swiper-slide h-[35vh] md:h-[73vh]">
-            <img src="../../assets/images/swiper/slider4.jpg" alt="" class="w-full"/>
+            <img src="../../assets/images/brightfuture.jpg" alt="" class="w-full"/>
             <div class="absolute inset-0 bg-sky-600/30"></div>
             <div class="absolute bottom-5 md:bottom-32 left-5 lg:left-56 text-white">
                 <h2 class="text-2xl mb-5">Need assistance? We're here to help</h2>
@@ -50,7 +57,7 @@
             </div>
         </swiper-slide>
         <swiper-slide class="swiper-slide h-[35vh] md:h-[73vh]">
-            <img src="../../assets/images/swiper/slider6.jpg" alt="" class="w-full"/>
+            <img src="../../assets/images/donate3.jpeg" alt="" class="w-full"/>
             <div class="absolute inset-0 bg-sky-600/30"></div>
             <div class="absolute bottom-5 md:bottom-32 left-5 lg:left-56 text-white">
                 <h2 class="text-2xl mb-5">Need assistance? We're here to help</h2>
@@ -64,7 +71,7 @@
         </swiper-slide>
 
         <swiper-slide class="swiper-slide h-[35vh] md:h-[73vh]">
-            <img src="../../assets/images/swiper/slider4.jpg" alt="" class="w-full"/>
+            <img src="../../assets/images/donate2.jpg" alt="" class="w-full"/>
             <div class="absolute inset-0 bg-sky-600/30"></div>
             <div class="absolute bottom-5 md:bottom-32 left-5 lg:left-56 text-white">
                 <h2 class="text-2xl mb-5">Need assistance? We're here to help</h2>
@@ -77,20 +84,7 @@
             </div>
         </swiper-slide>
         <swiper-slide class="swiper-slide h-[35vh] md:h-[73vh]">
-            <img src="../../assets/images/swiper/slider5.png" alt="" class="w-full"/>
-            <div class="absolute inset-0 bg-sky-600/30"></div>
-            <div class="absolute bottom-5 md:bottom-32 left-5 lg:left-56 text-white">
-                <h2 class="text-2xl mb-5">Need assistance? We're here to help</h2>
-                <!-- <p class="lg my-3">port when you need it contact us</p> -->
-                 <a href="javascript:void(0);" @click="scrollToSection"
-                    class="bg-theme-red px-4 py-2 rounded-md font-semibold hover:bg-slate-50 hover:text-[#193eb8]"
-                >
-                    Contact Us
-            </a>
-            </div>
-        </swiper-slide>
-        <swiper-slide class="swiper-slide h-[35vh] md:h-[73vh]">
-            <img src="../../assets/images/swiper/slider6.jpg" alt="" class="w-full"/>
+            <img src="../../assets/images/disable.jpeg" alt="" class="w-full"/>
             <div class="absolute inset-0 bg-sky-600/30"></div>
             <div class="absolute bottom-5 md:bottom-32 left-5 lg:left-56 text-white">
                 <h2 class="text-2xl mb-5">Need assistance? We're here to help</h2>

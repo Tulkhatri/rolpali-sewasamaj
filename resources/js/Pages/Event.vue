@@ -32,8 +32,8 @@ import PageHeader from "../components/PageHeader.vue";
                         <div
                             class="date-wrapper absolute bg-red-500 py-4 px-6 text-white font-bold text-xl text-center bottom-0 z-10"
                         >
-                            <h2>28</h2>
-                            <h2>May</h2>
+                            <h2>20</h2>
+                            <h2>Dec</h2>
                         </div>
                           <!-- Overlay background color on hover -->
                       <div class="absolute inset-x-0 bottom-0 h-0 group-hover:h-full bg-[rgba(29,37,55,0.8)] transition-all duration-300 ease-in-out"></div>
@@ -41,11 +41,9 @@ import PageHeader from "../components/PageHeader.vue";
                     <div
                         class="title-detail-wrapper py-6 px-4 bg-white custom-shadow"
                     >
-                        <h1 class="text-xl font-medium group-hover:text-red-600">Our Campaign</h1>
+                        <h1 class="text-xl font-medium group-hover:text-red-600">Event</h1>
                         <p class="mt-2">
-                            Lorem ipsum dolor sit amet, cata adipisicing morem
-                            ipsum dolor sit amet, cata adipisese elit, sed do
-                            eiusmod temapor
+                            Our Next Event...
                         </p>
                     </div>
                 </div>
@@ -58,8 +56,8 @@ import PageHeader from "../components/PageHeader.vue";
                         <div
                             class="date-wrapper absolute bg-red-500 py-4 px-6 text-white font-bold text-xl text-center bottom-0 z-10"
                         >
-                            <h2>28</h2>
-                            <h2>May</h2>
+                            <h2>25</h2>
+                            <h2>Dec</h2>
                         </div>
                           <!-- Overlay background color on hover -->
                       <div class="absolute inset-x-0 bottom-0 h-0 group-hover:h-full bg-[rgba(29,37,55,0.8)] transition-all duration-300 ease-in-out"></div>
@@ -67,11 +65,9 @@ import PageHeader from "../components/PageHeader.vue";
                     <div
                         class="title-detail-wrapper py-6 px-4 bg-white custom-shadow"
                     >
-                        <h1 class="text-xl font-medium group-hover:text-red-600">Our Campaign</h1>
+                        <h1 class="text-xl font-medium group-hover:text-red-600">Event</h1>
                         <p class="mt-2">
-                            Lorem ipsum dolor sit amet, cata adipisicing morem
-                            ipsum dolor sit amet, cata adipisese elit, sed do
-                            eiusmod temapor
+                            Our Next Event...
                         </p>
                     </div>
                 </div>
@@ -84,8 +80,8 @@ import PageHeader from "../components/PageHeader.vue";
                         <div
                             class="date-wrapper absolute bg-red-500 py-4 px-6 text-white font-bold text-xl text-center bottom-0 z-10"
                         >
-                            <h2>28</h2>
-                            <h2>May</h2>
+                            <h2>27</h2>
+                            <h2>Dec</h2>
                         </div>
                           <!-- Overlay background color on hover -->
                       <div class="absolute inset-x-0 bottom-0 h-0 group-hover:h-full bg-[rgba(29,37,55,0.8)] transition-all duration-300 ease-in-out"></div>
@@ -93,11 +89,9 @@ import PageHeader from "../components/PageHeader.vue";
                     <div
                         class="title-detail-wrapper py-6 px-4 bg-white custom-shadow"
                     >
-                        <h1 class="text-xl font-medium group-hover:text-red-600">Our Campaign</h1>
+                        <h1 class="text-xl font-medium group-hover:text-red-600">Event</h1>
                         <p class="mt-2">
-                            Lorem ipsum dolor sit amet, cata adipisicing morem
-                            ipsum dolor sit amet, cata adipisese elit, sed do
-                            eiusmod temapor
+                            Our Next Event...
                         </p>
                     </div>
                 </div>
@@ -110,8 +104,8 @@ import PageHeader from "../components/PageHeader.vue";
                         <div
                             class="date-wrapper absolute bg-red-500 py-4 px-6 text-white font-bold text-xl text-center bottom-0 z-10"
                         >
-                            <h2>28</h2>
-                            <h2>May</h2>
+                            <h2>30</h2>
+                            <h2>Dec</h2>
                         </div>
                           <!-- Overlay background color on hover -->
                       <div class="absolute inset-x-0 bottom-0 h-0 group-hover:h-full bg-[rgba(29,37,55,0.8)] transition-all duration-300 ease-in-out"></div>
@@ -119,11 +113,9 @@ import PageHeader from "../components/PageHeader.vue";
                     <div
                         class="title-detail-wrapper py-6 px-4 bg-white custom-shadow"
                     >
-                        <h1 class="text-xl font-medium group-hover:text-red-600">Our Campaign</h1>
+                        <h1 class="text-xl font-medium group-hover:text-red-600">Event</h1>
                         <p class="mt-2">
-                            Lorem ipsum dolor sit amet, cata adipisicing morem
-                            ipsum dolor sit amet, cata adipisese elit, sed do
-                            eiusmod temapor
+                            Our Next Event...
                         </p>
                     </div>
                 </div>

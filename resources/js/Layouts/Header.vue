@@ -42,12 +42,14 @@ onBeforeUnmount(() => {
 <template>
     <div class="top-social-media-section">
         <div class="bg-theme-light px-5 py-2 lg:px-56 flex justify-between">
-            <p>Welcome to Rolpali sewasamaj</p>
+            <p>Empowering communities and fostering growth for a brighter Rolpa.</p>
             <div class="social-media-wrapper">
-                <font-awesome-icon
-                    :icon="['fab', 'facebook']"
-                    class="mx-3 cursor-pointer text-blue-700"
-                />
+                <a href="https://www.facebook.com/profile.php?id=100089722701713" target="_blank" rel="noopener noreferrer">
+                    <font-awesome-icon
+                        :icon="['fab', 'facebook']"
+                        class="mx-3 cursor-pointer text-blue-700"
+                    />
+                </a>
                 <font-awesome-icon
                     :icon="['fab', 'linkedin']"
                     class="mx-3 cursor-pointer text-blue-500"
@@ -57,26 +59,28 @@ onBeforeUnmount(() => {
     </div>
     <div class="top-social-media-section">
         <div class="px-5 py-2 lg:px-56 flex justify-between items-center">
-            <div class="image-wrapper flex items-center">
-                <img
-                    class="block h-20 w-auto m-auto"
-                    src="../../assets/images/logo.jpg"
-                    alt="Logo"
-                />
-                <span class="mx-2">Rolpali Sewa samaj Rolpa</span>
-            </div>
+            <Link :href="route('home')">
+                <div class="image-wrapper flex items-center">
+                    <img
+                        class="block h-20 w-auto m-auto"
+                        src="../../assets/images/logo.jpg"
+                        alt="Logo"
+                    />
+                    <span class="mx-2">Rolpali Sewa samaj Rolpa</span>
+                </div>
+            </Link>
             <div class="social-media-wrapper flex">
                 <div class="hidden lg:flex justify-start items-center">
                     <font-awesome-icon
                         :icon="['far', 'envelope']"
                         class="mx-3 cursor-pointer bg-theme-red text-white p-1.5 rounded-md"
-                    /><span>rolpalisewasamaj@gmail.com</span>
+                    /><span>rolpalisewasamajrolpa@gmail.com</span>
                 </div>
                 <div class="flex justify-start items-center">
                     <font-awesome-icon
                         :icon="['fas', 'phone-volume']"
                         class="mx-3 cursor-pointer bg-theme-red text-white p-1.5 rounded-md"
-                    /><span>9847862779</span>
+                    /><span>9847800000</span>
                 </div>
             </div>
         </div>
@@ -93,10 +97,10 @@ onBeforeUnmount(() => {
 
             <div class="right-button flex justify-center items-center">
                 <div class="custom-slider-top-button bg-white text-red-600 m-4 px-6 py-1.5 rounded-3xl text-nowrap">
-                    <Link :href="route('about')">Donate Now</Link>
+                    <Link :href="route('contactus')">Donate Now</Link>
                 </div>
                 <div class="custom-slider-top-button bg-white text-red-600 m-4 px-6 py-1.5 rounded-3xl text-nowrap">
-                    <Link :href="route('about')">Join Now</Link>
+                    <Link :href="route('contactus')">Join Now</Link>
                 </div>
                 <font-awesome-icon 
                     :icon="isMenuOpen ? ['fas', 'xmark'] : ['fas', 'bars']" 

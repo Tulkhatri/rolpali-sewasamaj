@@ -9,7 +9,7 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
     <!-- head imported globally inside app.js -->
     <Head title="Home"></Head>
     <Swiper />
-    <div class="flex flex-col items-center mt-20 mx-5 lg:mx-56 lg:flex-row">
+    <div class="flex flex-col items-center mt-20 mx-5 lg:mx-56 lg:flex-row gap-5">
         <div class="why-chose-us-image-wrapper basis-1/2 relative">
             <img src="../../assets/images/whychooseus.png" alt="" />
 
@@ -156,18 +156,18 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
 
     <UpCommingEvent />
 
-    <div class="video-testimonials-wrapper flex flex-col lg:flex-row mt-20">
+    <div class="video-testimonials-wrapper w-[100%] flex flex-col lg:flex-row mt-20">
         <iframe
             width="100%"
             height="400vh"
-            src="https://www.youtube.com/embed/S1dNuCG3sOA"
+            src="https://www.youtube.com/embed/GQyb3Q4H4Rg?si=KnZeXIg4dksoqzJJ"
             title="ENGLISH SPEECH | BARACK OBAMA: The People of India (English Subtitles)"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
         ></iframe>
-        <!-- <Testimonials /> -->
+        <Testimonials />
     </div>
 
     <Donation />
