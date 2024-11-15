@@ -25,7 +25,7 @@
                 </div>
                 <div class="title-detail-wrapper py-6 px-4 bg-white custom-shadow">
                     <h1 class="text-xl font-medium group-hover:text-red-600"> Blood Donation</h1>
-                    <p class="mt-2">
+                    <p class="mt-2 text-justify">
                         Join us in saving lives through our blood donation drive! Your single donation can help patients in need and make a real difference in our community. Every drop counts—donate blood and be a hero for those in need.
                     </p>
                 </div>

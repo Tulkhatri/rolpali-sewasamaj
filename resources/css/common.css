@@ -86,6 +86,7 @@ img {
   font-size: 1rem !important;
   color: white;
   font-weight: 700;
+  display: none;
 }
 .swiper-slide .swiper-button-prev {
   margin-left: 2rem;
@@ -111,6 +112,7 @@ img {
   font-size: 0.8rem !important;
   color: white;
   font-weight: 700;
+  display: none;
 }
 .swiper-testimonials .swiper-button-prev {
   margin-left: 1rem;
