@@ -18,7 +18,7 @@ import PageHeader from "../components/PageHeader.vue";
             </p>
         </div>
         <div class="upcomming-event-row mt-10 mx-5 lg:px-56">
-            <div class="row-wrapper mt-5 flex justify-between items-center gap-5">
+            <div class="row-wrapper mt-5 md:flex justify-between items-center gap-5">
                 <div class="basis-1/2">
                     <input
                         type="text"
@@ -26,7 +26,7 @@ import PageHeader from "../components/PageHeader.vue";
                         class="rounded-md p-2 border-2 border-slate-200 w-full focus:border-2 focus:!border-red-200 focus:outline-none"
                     />
                 </div>
-                <div class="basis-1/2">
+                <div class="basis-1/2 mt-5 md:mt-0">
                     <input
                         type="email"
                         placeholder="Email"
@@ -34,7 +34,7 @@ import PageHeader from "../components/PageHeader.vue";
                     />
                 </div>
             </div>
-            <div class="row-wrapper mt-5 flex justify-between items-center gap-5">
+            <div class="row-wrapper mt-5 md:flex justify-between items-center gap-5">
                 <div class="basis-1/2">
                     <input
                         type="text"
@@ -46,7 +46,7 @@ import PageHeader from "../components/PageHeader.vue";
                     <input
                         type="text"
                         placeholder="Address"
-                        class="rounded-md p-2 border-2 border-slate-200 w-full focus:border-2 focus:!border-red-200 focus:outline-none"
+                        class="mt-5 md:mt-0 rounded-md p-2 border-2 border-slate-200 w-full focus:border-2 focus:!border-red-200 focus:outline-none"
                     />
                 </div>
             </div>
@@ -82,8 +82,7 @@ import PageHeader from "../components/PageHeader.vue";
                         class="cursor-pointer bg-theme-red text-white p-1.5 rounded-md"
                     />
                     <div class="text-wrapper">
-                        <h1>9847800000</h1>
-                        <h1>9847800000</h1>
+                        <h1>9848840050</h1>
                     </div>
                 </div>
                 <div class="icon-text-wrapper flex justify-start items-center gap-5">
@@ -93,7 +92,6 @@ import PageHeader from "../components/PageHeader.vue";
                     />
                     <div class="text-wrapper">
                         <h1>rolpalisewasamajrolpa@gmail.com</h1>
-                        <h1>rolpalisewasamaj@gmail.com</h1>
                     </div>
                 </div>
             </div>
