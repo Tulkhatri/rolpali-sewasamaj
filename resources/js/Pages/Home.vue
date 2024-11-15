@@ -16,7 +16,7 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
             <div
                 class="absolute left-0 bottom-0 bg-slate-100 mx-5 lg:mx-10 p-5 rounded-t-lg"
             >
-                <p>
+                <p class="text-justify">
                     Our goal at Rolpali Sewa Samaj is to uplift lives and foster hope across Nepal. Thank you for supporting our mission.
                     -Chairperson, Rolpali Sewa Samaj
                 </p>
@@ -24,10 +24,10 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
         </div>
         <div class="right-sec basis-1/2 lg:ml-14">
             <h4 class="horizontal-line">Why choose us</h4>
-            <h1 class="mt-8 text-2xl font-medium">
+            <h1 class="mt-8 text-xl md:text-2xl font-medium">
                 Empowering Lives and Building Hope
             </h1>
-            <h1 class="text-2xl font-medium">
+            <h1 class="text-xl md:text-2xl font-medium">
                  Across Nepal
                 <span class="text-red-600">Rolpali Sewa Samaj</span>
             </h1>
@@ -48,7 +48,7 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
 
     <div class="mission-area bg-gray-100 mt-20 py-20">
         <div class="mx-5 lg:mx-56">
-            <h1 class="title-section text-2xl text-center font-medium">
+            <h1 class="title-section text-xl md:text-2xl text-center font-medium">
                 Our Mission
             </h1>
             <div class="mt-8 w-48 m-auto">

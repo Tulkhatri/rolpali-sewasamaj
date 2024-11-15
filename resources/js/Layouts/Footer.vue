@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
     <div class="bg-slate-800">
-        <div class="flex flex-col lg:flex-row mx-5 lg:mx-56 py-20 gap-5">
+        <div class="flex flex-col lg:flex-row mx-5 lg:mx-56 py-10 md:py-20 gap-5">
             <div class="footer-address-wrapper basis-1/3 text-white">
                 <h2 class="font-bold text-lg">Contact Info</h2>
                 <p class="my-5">
@@ -16,7 +16,7 @@
                 </div>
                 <div class="icon-text my-4">
                     <font-awesome-icon :icon="['fas', 'phone']" class="mr-3" />
-                    <span>9847862779</span>
+                    <span>9848840050</span>
                 </div>
                 <div class="icon-text">
                     <font-awesome-icon
@@ -135,16 +135,16 @@
         </div>
     </div>
     <div class="bg-black px-5 lg:px-56 py-5 flex justify-between flex-col md:flex-row">
-        <h1 class="text-white">
-            @2024 Rolpali Sewasamaj Rolpa All Right Reserved.
+        <h1 class="text-white text-sm">
+            ©2024 Rolpali Sewa samaj All rights reserved
         </h1>
-        <h1 class="text-white">
-            Designed and Developed by
+        <h1 class="text-white text-sm">
+            Developed by
             <a
                 href="http://tulbahadurkhatri.com.np/"
                 target="_blank"
-                class="text-blue-400 font-bold ml-2 hover:underline"
-                >Tul Bahadur Khatri</a
+                class="text-blue-400 font-bold ml-1 hover:underline"
+                >Tul Bahadur Khatri <span class="text-xs">9847862779</span></a
             >
         </h1>
     </div>
