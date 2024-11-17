@@ -46,7 +46,7 @@ function changeLanguage(lang) {
 </script>
 
 <template>
-  <ul class="list-unstyled flex space-x-3 justify-center items-center">
+  <ul class="list-unstyled flex space-x-3 justify-center items-center mr-2">
     <li v-for="language in languages" :key="language.code">
       <a
         :href="`#googtrans(${defaultLanguage}|${language.code})`"
