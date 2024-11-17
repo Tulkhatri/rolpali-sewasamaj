@@ -1,7 +1,7 @@
 <script setup>
 import { Link, usePage } from "@inertiajs/vue3";
 import { ref, onMounted, onBeforeUnmount } from "vue";
-
+import GoogleTranslate from "../components/LanguageTranslate/GoogleTranslate.vue";
 const page = usePage();
 const isMobileView = ref(window.innerWidth < 1092); 
 const isMenuOpen = ref(false); // Track menu open/close state
@@ -63,7 +63,7 @@ onBeforeUnmount(() => {
                 <div class="image-wrapper flex items-center">
                     <img
                         class="block h-14 md:h-20 w-auto m-auto"
-                        src="../../assets/images/logo.jpg"
+                        src="../../assets/images/logo.png"
                         alt="Logo"
                     />
                     <span class="mx-2 text-sm md:text-lg">Rolpali Sewa samaj</span>
@@ -100,9 +100,11 @@ onBeforeUnmount(() => {
                     <div class="custom-slider-top-button bg-white text-red-600 m-4 px-6 py-1.5 rounded-3xl text-nowrap">
                         <Link :href="route('contactus')">Donate</Link>
                     </div>
-                    <div class="custom-slider-top-button bg-white text-red-600 m-4 px-6 py-1.5 rounded-3xl text-nowrap">
+                    <div class="custom-slider-top-button bg-white text-red-600 my-4 mr-4 px-6 py-1.5 rounded-3xl text-nowrap">
                         <Link :href="route('contactus')">Join Now</Link>
                     </div>
+        <GoogleTranslate />
+
              </div>
                 <font-awesome-icon 
                     :icon="isMenuOpen ? ['fas', 'xmark'] : ['fas', 'bars']" 
