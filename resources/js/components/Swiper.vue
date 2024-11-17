@@ -20,7 +20,7 @@
         <swiper-slide class="swiper-slide h-[35vh] md:h-[73vh]">
             <img src="../../assets/images/donate1.jpg" alt="" class="w-full" />
             <div class="absolute inset-0 bg-sky-600/30"></div>
-            <div class="absolute bottom-5 md:bottom-32 left-5 lg:left-56 text-white text-center w-full md:text-left">
+            <div class="absolute bottom-5 md:bottom-32 lg:left-56 text-white text-center w-full md:text-left">
                 <h2 class="text-xl md:text-2xl mb-5">Need assistance? We're here to help</h2>
                 <!-- <p class="lg my-3">port when you need it contact us</p> -->
                 <a href="javascript:void(0);" @click="scrollToSection"
@@ -33,7 +33,7 @@
         <swiper-slide class="swiper-slide h-[35vh] md:h-[73vh]">
             <img src="../../assets/images/emporing.jpg" alt="" class="w-full"/>
             <div class="absolute inset-0 bg-sky-600/30"></div>
-            <div class="absolute bottom-5 md:bottom-32 left-5 lg:left-56 text-white text-center w-full md:text-left">
+            <div class="absolute bottom-5 md:bottom-32 lg:left-56 text-white text-center w-full md:text-left">
                 <h2 class="text-xl md:text-2xl mb-5">Need assistance? We're here to help</h2>
                 <!-- <p class="lg my-3">port when you need it contact us</p> -->
                  <a href="javascript:void(0);" @click="scrollToSection"
@@ -46,7 +46,7 @@
         <swiper-slide class="swiper-slide h-[35vh] md:h-[73vh]">
             <img src="../../assets/images/brightfuture.jpg" alt="" class="w-full"/>
             <div class="absolute inset-0 bg-sky-600/30"></div>
-            <div class="absolute bottom-5 md:bottom-32 left-5 lg:left-56 text-white text-center w-full md:text-left">
+            <div class="absolute bottom-5 md:bottom-32 lg:left-56 text-white text-center w-full md:text-left">
                 <h2 class="text-xl md:text-2xl mb-5">Need assistance? We're here to help</h2>
                 <!-- <p class="lg my-3">port when you need it contact us</p> -->
                  <a href="javascript:void(0);" @click="scrollToSection"
@@ -59,7 +59,7 @@
         <swiper-slide class="swiper-slide h-[35vh] md:h-[73vh]">
             <img src="../../assets/images/donate3.jpeg" alt="" class="w-full"/>
             <div class="absolute inset-0 bg-sky-600/30"></div>
-            <div class="absolute bottom-5 md:bottom-32 left-5 lg:left-56 text-white text-center w-full md:text-left">
+            <div class="absolute bottom-5 md:bottom-32 lg:left-56 text-white text-center w-full md:text-left">
                 <h2 class="text-xl md:text-2xl mb-5">Need assistance? We're here to help</h2>
                 <!-- <p class="lg my-3">port when you need it contact us</p> -->
                  <a href="javascript:void(0);" @click="scrollToSection"
@@ -73,7 +73,7 @@
         <swiper-slide class="swiper-slide h-[35vh] md:h-[73vh]">
             <img src="../../assets/images/donate2.jpg" alt="" class="w-full"/>
             <div class="absolute inset-0 bg-sky-600/30"></div>
-            <div class="absolute bottom-5 md:bottom-32 left-5 lg:left-56 text-white text-center w-full md:text-left">
+            <div class="absolute bottom-5 md:bottom-32 lg:left-56 text-white text-center w-full md:text-left">
                 <h2 class="text-xl md:text-2xl mb-5">Need assistance? We're here to help</h2>
                 <!-- <p class="lg my-3">port when you need it contact us</p> -->
                  <a href="javascript:void(0);" @click="scrollToSection"
@@ -86,7 +86,7 @@
         <swiper-slide class="swiper-slide h-[35vh] md:h-[73vh]">
             <img src="../../assets/images/disable.jpeg" alt="" class="w-full"/>
             <div class="absolute inset-0 bg-sky-600/30"></div>
-            <div class="absolute bottom-5 md:bottom-32 left-5 lg:left-56 text-white text-center w-full md:text-left">
+            <div class="absolute bottom-5 md:bottom-32 lg:left-56 text-white text-center w-full md:text-left">
                 <h2 class="text-xl md:text-2xl mb-5">Need assistance? We're here to help</h2>
                 <!-- <p class="lg my-3">port when you need it contact us</p> -->
                  <a href="javascript:void(0);" @click="scrollToSection"
