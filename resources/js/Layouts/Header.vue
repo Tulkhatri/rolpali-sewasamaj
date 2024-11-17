@@ -101,7 +101,7 @@ onBeforeUnmount(() => {
                         <Link :href="route('contactus')">Donate</Link>
                     </div>
                     <div class="custom-slider-top-button bg-white text-red-600 my-4 mr-4 px-6 py-1.5 rounded-3xl text-nowrap">
-                        <Link :href="route('contactus')">Join Now</Link>
+                        <Link :href="route('contactus')">Join</Link>
                     </div>
         <GoogleTranslate />
 
