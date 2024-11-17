@@ -7,7 +7,7 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
 </script>
 <template>
     <!-- head imported globally inside app.js -->
-    <Head title="Home"></Head>
+    <Head title="Home Page"></Head>
     <Swiper />
     <div class="flex flex-col items-center mt-20 mx-5 lg:mx-56 lg:flex-row gap-5">
         <div class="why-chose-us-image-wrapper basis-1/2 relative">
