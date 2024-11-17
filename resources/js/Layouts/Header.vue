@@ -7,7 +7,7 @@ const isMobileView = ref(window.innerWidth < 1092);
 const isMenuOpen = ref(false); // Track menu open/close state
 
 const menuItems = [
-    { name: 'Home', route: route('home'), component: 'Home' },
+    { name: 'Main Page', route: route('home'), component: 'Home' },
     { name: 'About Us', route: route('about'), component: 'About' },
     { name: 'Donation', route: route('donation'), component: 'Donation' },
     { name: 'Gallery', route: route('gallery'), component: 'Gallery' },
