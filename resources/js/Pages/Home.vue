@@ -23,7 +23,7 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
             </div>
         </div>
         <div class="right-sec basis-1/2 lg:ml-14">
-            <h4 class="horizontal-line">Why choose us</h4>
+            <h4 class="horizontal-line">About us</h4>
             <h1 class="mt-8 text-xl md:text-2xl font-medium">
                 Empowering Lives and Building Hope
             </h1>
@@ -38,11 +38,13 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
                  Driven by transparency and a deep sense of purpose, we strive to make a lasting impact on the communities we serve. Join us in our mission to bring hope and change where it's needed most.
             </p>
             <!-- hover:bg-gray-100 hover:text-red-600 -->
+             <div class="flex items-center justify-center md:justify-end">
             <button
                 class="custom-slider-button mt-8 bg-theme-red text-white px-8 py-2 rounded-full font-medium"
             >
                 Read More
             </button>
+        </div>
         </div>
     </div>
 

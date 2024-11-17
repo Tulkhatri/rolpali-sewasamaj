@@ -3,15 +3,15 @@ import { ref, reactive, onMounted } from 'vue'
 const defaultLanguage = ref('tr')
 
 const languages = reactive([
+{
+    name: 'नेपाली',  // Name in Nepali script
+    code: 'ne',  // Language code for Nepali
+    flag: 'np',  // Nepali flag code
+  },
   {
     name: 'ne',
     code: 'en',
     flag: 'us',
-  },
-  {
-    name: 'नेपाली',  // Name in Nepali script
-    code: 'ne',  // Language code for Nepali
-    flag: 'np',  // Nepali flag code
   },
 ])
 
