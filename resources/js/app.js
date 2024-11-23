@@ -17,6 +17,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import AdminLayout from './Layouts/BackPanel/AdminLayout.vue';
 
 /* add icons to the library */
 library.add(fas,far,fab)
@@ -26,9 +27,16 @@ createInertiaApp({
     title: (title) => `${title}`,
     resolve: (name) => {
         const pages = import.meta.glob("./Pages/**/*.vue", { eager: true });
-
+    
         let page = pages[`./Pages/${name}.vue`];
-        page.default.layout = page.default.layout || Layout;
+
+        // Check if the page is part of the admin panel
+        if (name.startsWith("BackPanel/")) {
+            page.default.layout = page.default.layout || AdminLayout;
+        } else {
+            page.default.layout = page.default.layout || Layout; // Default layout
+        }
+    
         return page;
     },
     setup({ el, App, props, plugin }) {
