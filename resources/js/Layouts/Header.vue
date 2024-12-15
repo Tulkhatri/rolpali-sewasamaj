@@ -9,7 +9,7 @@ const isMenuOpen = ref(false); // Track menu open/close state
 const menuItems = [
     { name: 'Home Page', route: route('home'), component: 'Home' },
     { name: 'About Us', route: route('about'), component: 'About' },
-    { name: 'Donation', route: route('donation'), component: 'Donation' },
+    { name: 'Donation', route: route('donation'), component: 'FrontPanel/Donation/Donation' },
     { name: 'Gallery', route: route('gallery'), component: 'Gallery' },
     { name: 'Event', route: route('event'), component: 'Event' },
     { name: 'News', route: route('news'), component: 'News' },

@@ -23,16 +23,16 @@ const menuItems = [
 <template>
     <div
         :class="[
-            'shadow-[0px_0_0px_1px_#B9B9B9] h-[82.8vh] bg-blue-300 transition-all duration-300 overflow-hidden',
-            isMenuOpen ? 'w-[15%]' : 'w-[58px]',
+            'shadow-[0px_0_0px_1px_#B9B9B9] bg-blue-300 transition-all duration-300 overflow-x-hidden',
+            isMenuOpen ? 'w-[17%]' : 'w-[49px]',
         ]">
         <ul>
             <li
                 v-for="item in menuItems"
                 :key="item.name"
                 :class="[
-                    'px-4 hover:bg-slate-100',
-                    page.component === item.component ? 'bg-white' : '',
+                    'pl-1 border-l-4 border-blue-300 hover:bg-slate-100 hover:border-white',
+                    page.component === item.component ? 'bg-white border-l-4 border-blue-500': '',
                 ]">
                 <Link 
                     :href="route(item.route)" class="menu-wrapper p-2 flex justify-between items-center gap-2 w-full">
