@@ -102,7 +102,7 @@ onBeforeUnmount(() => {
               <font-awesome-icon :icon="['fas', 'angle-right']" class="text-sm" />
             </Link>
             <Link
-              href="#"
+              :href="route('admin.logout')" method="post" as ="button" type="button"
               class="p-2 rounded-md hover:bg-slate-100 icon-text flex justify-start items-center gap-3"
               @click="toggleUserMenu"
             >

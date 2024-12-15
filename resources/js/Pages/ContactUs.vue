@@ -3,7 +3,7 @@ import PageHeader from "../components/PageHeader.vue";
 </script>
 <template>
     <!-- head imported globally inside app.js -->
-    <Head title="News"></Head>
+    <Head title="Contact Us"></Head>
     <PageHeader pageheader="Contact Us" />
     <div class="upcomming-event bg-slate-100 py-20">
         <div class="mx-5 lg:mx-56">
