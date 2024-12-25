@@ -1,49 +1,49 @@
 <script setup>
-import CountDown from "../components/CountDown.vue";
-import Donation from "../components/Donation/Donation.vue";
-import Swiper from "../components/Swiper.vue";
-import Testimonials from "../components/Testimonials.vue";
-import UpCommingEvent from "../components/UpCommingEvent.vue";
+import CountDown from "../../../components/CountDown.vue";
+import Donation from "../../../components/Donation/Donation.vue";
+import Swiper from "../../../components/Swiper.vue";
+import Testimonials from "../../../components/Testimonials.vue";
+import UpCommingEvent from "../../../components/UpCommingEvent.vue";
+defineProps({
+    aboutus:Object,
+    slider:Array,
+    event:Array,
+    donation:Array
+});
 </script>
 <template>
     <!-- head imported globally inside app.js -->
-    <Head title="Home Page"></Head>
-    <Swiper />
+    <Head title="होमपेज"></Head>
+    <Swiper :slider="slider"/>
     <div class="flex flex-col items-center mt-20 mx-5 lg:mx-56 lg:flex-row gap-5">
         <div class="why-chose-us-image-wrapper basis-1/2 relative">
-            <img src="../../assets/images/whychooseus.png" alt="" />
+            <img :src="aboutus.chairman_image ? '/storage/' + aboutus.chairman_image : '/noimage.png'" alt="" />
 
             <div
                 class="absolute left-0 bottom-0 bg-slate-100 mx-5 lg:mx-10 p-5 rounded-t-lg"
             >
                 <p class="text-justify">
-                    Our goal at Rolpali Sewa Samaj is to uplift lives and foster hope across Nepal. Thank you for supporting our mission.
-                    -Chairperson, Rolpali Sewa Samaj
+                   {{ aboutus.chairman_message }}
                 </p>
             </div>
         </div>
         <div class="right-sec basis-1/2 lg:ml-14">
-            <h4 class="horizontal-line">About us</h4>
+            <h4 class="horizontal-line">हाम्रो बारेमा</h4>
             <h1 class="mt-8 text-xl md:text-2xl font-medium">
-                Empowering Lives and Building Hope
+               {{aboutus.aboutus_title}}
             </h1>
-            <h1 class="text-xl md:text-2xl font-medium">
-                 Across Nepal
-                <span class="text-red-600">Rolpali Sewa Samaj</span>
-            </h1>
-            <p class="mt-8 text-justify">
-                Rolpali Sewa Samaj is committed to supporting and uplifting the lives of underprivileged and disabled individuals in Rolpa and across Nepal. Through compassionate aid and community-centered initiatives, we provide essential resources, foster empowerment, and work towards a brighter, more inclusive future for all Nepalese.
+           
+            <p class="mt-8 text-justify whitespace-pre-line">
+                {{aboutus.aboutus_detail}}
             </p>
-            <p class="mt-5 text-justify">
-                 Driven by transparency and a deep sense of purpose, we strive to make a lasting impact on the communities we serve. Join us in our mission to bring hope and change where it's needed most.
-            </p>
+           
             <!-- hover:bg-gray-100 hover:text-red-600 -->
              <div class="flex items-center justify-center md:justify-end">
-            <button
+            <Link :href="route('home.detail')"
                 class="custom-slider-button mt-8 bg-theme-red text-white px-8 py-2 rounded-full font-medium"
             >
-                Read More
-            </button>
+            थप पढ्नुहोस
+            </Link>
         </div>
         </div>
     </div>
@@ -51,19 +51,19 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
     <div class="mission-area bg-gray-100 mt-20 py-20">
         <div class="mx-5 lg:mx-56">
             <h1 class="title-section text-xl md:text-2xl text-center font-medium">
-                Our Mission
+                हाम्रो मिशन
             </h1>
             <div class="mt-8 w-48 m-auto">
-                <img src="../../assets/images/icon/icon.png" alt="" class="" />
+                <img src="../../../../assets/images/icon/icon.png" alt="" class="" />
             </div>
-            <p class="text-center mt-2">Empowering Communities, Transforming Lives, Building a Brighter Future for All.</p>
+            <p class="text-center mt-2"> {{aboutus.mission_short_quote}}</p>
         </div>
         <div class="mission-row mt-10 px-5 flex items-center flex-col lg:flex-row lg:px-56  gap-5">
             <div class="mission-container basis-[32%] relative group">
                 <div class="mission-wrapper">
                     <div class="image-wrapper">
-                        <img
-                            src="../../assets/images/emporing.jpg"
+                       <img class="h-56"
+                            :src="aboutus.mission1_image ? '/storage/'+ aboutus.mission1_image : '/noimage.png'"
                             alt=""
                         />
                     </div>
@@ -71,29 +71,29 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
                         class="title-detail-wrapper py-6 px-4 bg-white text-center"
                     >
                         <h1 class="text-xl font-medium">
-                            Empowering the Underprivileged
+                            {{ aboutus.mission1_title.length>30 ? aboutus.mission1_title.substring(0,30) + ' ...':aboutus.mission1_title  }}
                         </h1>
                         <p class="mt-2">
-                           We work to uplift marginalized communities, providing resources and opportunities to help individuals lead dignified lives.
+                            {{ aboutus.mission1_detail.length>100 ? aboutus.mission1_detail.substring(0,100) + ' ...':aboutus.mission1_detail  }}
                         </p>
                     </div>
                 </div>
                 <div class="mission-hover py-20 px-5 bg-red-600 text-center text-white absolute left-0 top-0 scale-0 group-hover:scale-100 transition-all duration-500">
                     <h1 class="text-xl font-medium">
-                        Empowering the Underprivileged
+                        {{ aboutus.mission1_title.length>30 ? aboutus.mission1_title.substring(0,30) + ' ...':aboutus.mission1_title  }}
                     </h1>
                     <p class="my-10">
-                        We work to uplift marginalized communities, providing resources and opportunities to help individuals lead dignified lives.
+                         {{ aboutus.mission2_detail.length>100 ? aboutus.mission2_detail.substring(0,100) + ' ...':aboutus.mission2_detail  }}
                     </p>
-                        <Link :href="route('home')" class="py-1 px-10 button-wrapper border-2 border-white rounded-full hover:bg-white hover:text-red-600 hover:transition-all duration-300 ease-in-out">More  <font-awesome-icon :icon="['fas', 'arrow-right']" /></Link>
+                        <Link :href="route('mission.detail')" class="py-1 px-10 button-wrapper border-2 border-white rounded-full hover:bg-white hover:text-red-600 hover:transition-all duration-300 ease-in-out">थप पढ्नुहोस  <font-awesome-icon :icon="['fas', 'arrow-right']" /></Link>
                 </div>
             </div>
 
             <div class="mission-container basis-[32%] relative group">
                 <div class="mission-wrapper">
                     <div class="image-wrapper">
-                        <img
-                            src="../../assets/images/disable.jpeg"
+                        <img class="h-56"
+                            :src="aboutus.mission2_image ? '/storage/'+ aboutus.mission2_image : '/noimage.png'"
                             alt=""
                         />
                     </div>
@@ -101,31 +101,29 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
                         class="title-detail-wrapper py-6 px-4 bg-white text-center"
                     >
                         <h1 class="text-xl font-medium">
-                            Supporting Disabled Individuals
-
+                            {{ aboutus.mission2_title.length>30 ? aboutus.mission2_title.substring(0,30) + ' ...':aboutus.mission2_title  }}
                         </h1>
                         <p class="mt-2">
-                            Our initiatives focus on enhancing the quality of life for disabled persons, ensuring they receive the care and support they deserve.
+                            {{ aboutus.mission2_detail.length>100 ? aboutus.mission2_detail.substring(0,100) + ' ...':aboutus.mission2_detail  }}
                         </p>
                     </div>
                 </div>
                 <div class="mission-hover py-20 px-5 bg-red-600 text-center text-white absolute left-0 top-0 scale-0 group-hover:scale-100 transition-all duration-500">
                     <h1 class="text-xl font-medium">
-                        Supporting Disabled Individuals
-
+                        {{ aboutus.mission2_title.length>30 ? aboutus.mission2_title.substring(0,30) + ' ...':aboutus.mission2_title  }}
                     </h1>
                     <p class="my-10">
-                        Our initiatives focus on enhancing the quality of life for disabled persons, ensuring they receive the care and support they deserve.
+                         {{ aboutus.mission2_detail.length>100 ? aboutus.mission2_detail.substring(0,100) + ' ...':aboutus.mission2_detail  }}
                     </p>
-                        <Link :href="route('home')" class="py-1 px-10 button-wrapper border-2 border-white rounded-full hover:bg-white hover:text-red-600 hover:transition-all duration-300 ease-in-out">More  <font-awesome-icon :icon="['fas', 'arrow-right']" /></Link>
+                        <Link :href="route('mission.detail')" class="py-1 px-10 button-wrapper border-2 border-white rounded-full hover:bg-white hover:text-red-600 hover:transition-all duration-300 ease-in-out">थप पढ्नुहोस  <font-awesome-icon :icon="['fas', 'arrow-right']" /></Link>
                 </div>
             </div>
 
-               <div class="mission-container basis-[32%] relative group">
+            <div class="mission-container basis-[32%] relative group">
                 <div class="mission-wrapper">
                     <div class="image-wrapper">
-                        <img
-                            src="../../assets/images/brightfuture.jpg"
+                        <img class="h-56"
+                            :src="aboutus.mission3_image ? '/storage/'+ aboutus.mission3_image : '/noimage.png'"
                             alt=""
                         />
                     </div>
@@ -133,21 +131,21 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
                         class="title-detail-wrapper py-6 px-4 bg-white text-center"
                     >
                         <h1 class="text-xl font-medium">
-                            Building a Brighter Future
+                            {{ aboutus.mission3_title.length>30 ? aboutus.mission3_title.substring(0,30) + ' ...':aboutus.mission3_title  }}
                         </h1>
                         <p class="mt-2">
-                            Through education, healthcare, and empowerment programs, we aim to create sustainable change for a stronger, more inclusive Nepal
+                            {{ aboutus.mission3_detail.length>100 ? aboutus.mission3_detail.substring(0,100) + ' ...':aboutus.mission3_detail  }}
                         </p>
                     </div>
                 </div>
                 <div class="mission-hover py-20 px-5 bg-red-600 text-center text-white absolute left-0 top-0 scale-0 group-hover:scale-100 transition-all duration-500">
                     <h1 class="text-xl font-medium">
-                        Building a Brighter Future
+                        {{ aboutus.mission3_title.length>30 ? aboutus.mission3_title.substring(0,30) + ' ...':aboutus.mission3_title  }}
                     </h1>
                     <p class="my-10">
-                        Through education, healthcare, and empowerment programs, we aim to create sustainable change for a stronger, more inclusive Nepal
+                         {{ aboutus.mission2_detail.length>100 ? aboutus.mission2_detail.substring(0,100) + ' ...':aboutus.mission2_detail  }}
                     </p>
-                        <Link :href="route('home')" class="py-1 px-10 button-wrapper border-2 border-white rounded-full hover:bg-white hover:text-red-600 hover:transition-all duration-300 ease-in-out">More  <font-awesome-icon :icon="['fas', 'arrow-right']" /></Link>
+                        <Link :href="route('mission.detail')" class="py-1 px-10 button-wrapper border-2 border-white rounded-full hover:bg-white hover:text-red-600 hover:transition-all duration-300 ease-in-out">थप पढ्नुहोस  <font-awesome-icon :icon="['fas', 'arrow-right']" /></Link>
                 </div>
             </div>
 
@@ -156,7 +154,7 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
 
    <CountDown />
 
-    <UpCommingEvent />
+    <UpCommingEvent :event="event"/>
 
     <div class="video-testimonials-wrapper w-[100%] flex flex-col lg:flex-row mt-20">
         <iframe
@@ -172,7 +170,7 @@ import UpCommingEvent from "../components/UpCommingEvent.vue";
         <Testimonials />
     </div>
 
-    <Donation />
+    <Donation :donation="donation"/>
 
     <!-- refresh page but doesnot go at top use preserve-scroll -->
     <!-- <Link class="mt-[600px] block" href="/" preserve-scroll>Refresh</Link> -->

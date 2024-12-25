@@ -138,7 +138,7 @@ img {
 .horizontal-line:after {
   position: absolute;
   top: 0.8rem;
-  left: 7rem;
+  left: 4rem;
   content: "";
   width: 5rem;
   height: 0.1rem;
@@ -427,6 +427,18 @@ body {
   position: fixed;
   top: 30px;
   right: 30px;
+  padding: 8px;
+  color: #fff;
+  border-radius: 4px;
+  display: none;
+  z-index: 9999;
+}
+
+.custom-notification-front {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 8px;
   color: #fff;
   border-radius: 4px;

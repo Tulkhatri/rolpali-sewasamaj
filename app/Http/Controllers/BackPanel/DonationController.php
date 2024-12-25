@@ -50,12 +50,14 @@ class DonationController extends Controller
             $rules = [
                 'title' => 'required',
                 'detail' => 'required',
-                'image' => ['file', 'nullable', 'max:2024'],
+                'image' => 'nullable|mimes:jpg,jpeg,png|max:512',
             ];
 
             $message = [
                 'title.required' => "Please Enter Donation Title",
                 'detail.required' => "please Enter Donation Detail",
+                'image.mimes' => 'The introduction image must be a file of type: jpg, jpeg, png.',
+                'image.max' => 'The introduction image must not exceed 512 KB.',
             ];
 
             $validate = Validator::make($post, $rules, $message);

@@ -7,7 +7,7 @@ defineProps({
 </script>
 <template>
     <!-- head imported globally inside app.js -->
-    <Head title="Donation"></Head>
-    <PageHeader pageheader="Donation" />
+    <Head title="सहयोग"></Head>
+    <PageHeader pageheader="सहयोग" />
     <Donation :donation="donation"/>   
 </template>

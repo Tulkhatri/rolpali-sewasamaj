@@ -5,8 +5,8 @@ import PageHeader from '../components/PageHeader.vue';
 </script>
 <template>
      <!-- head imported globally inside app.js -->
-    <Head title="Gallery"></Head>
-    <PageHeader pageheader="Gallery"/>
+    <Head title="फोटो/भिडियो"></Head>
+    <PageHeader pageheader="फोटो/भिडियो"/>
    
 
  <Gallery

@@ -1,70 +1,129 @@
 <script setup>
 import PageHeader from "../components/PageHeader.vue";
+import { useForm } from "@inertiajs/vue3";
+const form = useForm({
+    name: null,
+    phone: null,
+    email: null,
+    address: null,
+    message: null,
+  
+});
+const submit = () => {
+    const res = form.post(route("contact.save"), {
+        onError: () => {
+            showNotification("", "error");
+        },
+        onSuccess: () => {
+            form.reset();
+            showNotification("", "success");
+        },
+    });
+};
+const showNotification = (message, type) => {
+    var notification = document.getElementById("customNotification");
+
+    // Show the notification
+    notification.style.display = "block";
+
+    // Hide the notification after 3 seconds (adjust as needed)
+    setTimeout(function () {
+        notification.style.display = "none";
+    }, 3000);
+};
 </script>
+
 <template>
     <!-- head imported globally inside app.js -->
-    <Head title="Contact Us"></Head>
-    <PageHeader pageheader="Contact Us" />
+    <Head title="सम्पर्क गर्नुहोस"></Head>
+    <PageHeader pageheader="सम्पर्क गर्नुहोस" />
     <div class="upcomming-event bg-slate-100 py-20">
+
+        <div
+                id="customNotification"
+                class="custom-notification-front"
+                :class="{
+                    '!bg-green-500': $page.props.flash.type == 'Success',
+                    '!bg-red-500': $page.props.flash.type == 'error',
+                }"
+            >
+                <div>
+                    <font-awesome-icon :icon="['fas', $page.props.flash.type === 'error' ? 'x' : 'check']" class="mr-1"/>
+                    {{ $page.props.flash.message }}
+                </div>
+            </div>
+
         <div class="mx-5 lg:mx-56">
             <h1 class="title-section text-3xl text-center font-medium">
-                Contact Us
+                सम्पर्क गर्नुहोस
             </h1>
             <div class="mt-8 w-48 m-auto">
                 <img src="../../assets/images/icon/icon.png" alt="" class="" />
             </div>
             <p class="text-center mt-2">
-                Get in touch with Rolpali Sewa Samaj – we are here to help, support, and connect with our community. Reach out today!
+                रोल्पाली सेवा समाजसँग सम्पर्कमा रहनुहोस - हामी हाम्रो समुदायलाई मद्दत गर्न, समर्थन गर्न र जडान गर्न यहाँ छौं।
             </p>
         </div>
-        <div class="upcomming-event-row mt-10 mx-5 lg:px-56">
-            <div class="row-wrapper mt-5 md:flex justify-between items-center gap-5">
-                <div class="basis-1/2">
-                    <input
-                        type="text"
-                        placeholder="Name"
-                        class="rounded-md p-2 border-2 border-slate-200 w-full focus:border-2 focus:!border-red-200 focus:outline-none"
-                    />
+        <form @submit.prevent="submit">
+            <div class="upcomming-event-row mt-10 mx-5 lg:px-56">
+                <div class="row-wrapper mt-5 md:flex justify-between items-center gap-5">
+                    <div class="basis-1/2">
+                        <input
+                            type="text"
+                             v-model="form.name"
+                             :message="form.errors.name"
+                            placeholder="Name"
+                            class="rounded-md p-2 border-2 border-slate-200 w-full focus:border-2 focus:!border-red-200 focus:outline-none"
+                        />
+                        <p class="text-red-500 ml-1">{{ form.errors.name }}</p>
+                    </div>
+                    <div class="basis-1/2 mt-5 md:mt-0">
+                        <input
+                            v-model="form.email"
+                             :message="form.errors.email"
+                            type="email"
+                            placeholder="Email"
+                            class="rounded-md p-2 border-2 border-slate-200 w-full focus:border-2 focus:!border-red-200 focus:outline-none"
+                        />
+                    </div>
                 </div>
-                <div class="basis-1/2 mt-5 md:mt-0">
-                    <input
-                        type="email"
-                        placeholder="Email"
-                        class="rounded-md p-2 border-2 border-slate-200 w-full focus:border-2 focus:!border-red-200 focus:outline-none"
-                    />
+                <div class="row-wrapper mt-5 md:flex justify-between items-center gap-5">
+                    <div class="basis-1/2">
+                        <input
+                            type="text"
+                             v-model="form.phone"
+                             :message="form.errors.phone"
+                            placeholder="Phone"
+                            class="rounded-md p-2 border-2 border-slate-200 w-full focus:border-2 focus:!border-red-200 focus:outline-none"
+                        />
+                    </div>
+                    <div class="basis-1/2">
+                        <input
+                            type="text"
+                             v-model="form.address"
+                             :message="form.errors.address"
+                            placeholder="Address"
+                            class="mt-5 md:mt-0 rounded-md p-2 border-2 border-slate-200 w-full focus:border-2 focus:!border-red-200 focus:outline-none"
+                        />
+                    </div>
                 </div>
-            </div>
-            <div class="row-wrapper mt-5 md:flex justify-between items-center gap-5">
-                <div class="basis-1/2">
-                    <input
-                        type="text"
-                        placeholder="Phone"
-                        class="rounded-md p-2 border-2 border-slate-200 w-full focus:border-2 focus:!border-red-200 focus:outline-none"
-                    />
-                </div>
-                <div class="basis-1/2">
-                    <input
-                        type="text"
-                        placeholder="Address"
-                        class="mt-5 md:mt-0 rounded-md p-2 border-2 border-slate-200 w-full focus:border-2 focus:!border-red-200 focus:outline-none"
-                    />
-                </div>
-            </div>
 
-            <div class="my-4">
-                <textarea
-                    name=""
-                    id=""
-                    placeholder="Message"
-                  class="rounded-md p-2 border-2 border-slate-200 w-full focus:border-2 focus:!border-red-200 focus:outline-none"
-                ></textarea>
+                <div class="my-4">
+                    <textarea
+                        v-model="form.message"
+                        placeholder="Message"
+                    class="rounded-md p-2 border-2 border-slate-200 w-full focus:border-2 focus:!border-red-200 focus:outline-none"
+                    ></textarea>
+                    <p class="text-red-500 ml-1">{{ form.errors.message }}</p>
+                </div>
+                <button :disabled="form.processing"
+                    class="bg-theme-red p-2 rounded-md text-white hover:bg-slate-50 hover:text-red-500"
+                >
+                <font-awesome-icon :icon="['fas', 'paper-plane']" />
+                सन्देश पठाउनुहोस
+                </button>
             </div>
-            <button
-                class="bg-theme-red p-2 rounded-md text-white hover:bg-slate-50 hover:text-red-500 w-full"
-            >
-                Send Message
-            </button>
-        </div>
+        </form>
 
         <div class="contact-section flex flex-col lg:flex-row justify-start items-center gap-5 mx-5 lg:mx-56 my-10">
             <div class="left-section custom-shadow w-full lg:basis-1/3 p-5">
