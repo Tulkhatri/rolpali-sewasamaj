@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar.vue";
 </script>
 <template>
     <Header />
-    <main class="flex">
+    <main class="flex h-[87vh]">
         <Sidebar />
         <slot />
     </main>
