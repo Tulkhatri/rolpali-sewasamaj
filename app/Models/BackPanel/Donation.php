@@ -22,9 +22,7 @@ class Donation extends Model
                 'slug' => Str::slug('donation'.'-'.time())
             ];
             if ($post['image']) {
-                $dataArray = [
-                    'image' => $post['image']
-                ];
+                $dataArray['image'] = $post['image'];
             }
             if (!empty($post['id'])) {
                 $dataArray['updated_at'] = Carbon::now();

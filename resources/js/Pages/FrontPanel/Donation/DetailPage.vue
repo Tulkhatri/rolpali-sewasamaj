@@ -5,8 +5,8 @@ defineProps({
 });
 </script>
 <template>
-   <Head title="Donation"></Head>
-   <PageHeader pageheader="Donation Details" />
+   <Head title="सहयोग विवरण"></Head>
+   <PageHeader pageheader="सहयोग विवरण" />
    <div class="flex flex-col lg:flex-row items-center my-20 mx-5 lg:mx-56 gap-5">
         <div class="right-sec basis-1/2">
             <!-- <h4 class="horizontal-line-ourvision">Our Vision</h4> -->

@@ -9,7 +9,7 @@ const props = defineProps({
         <h1 class="text-3xl text-white mb-2">{{ pageheader }}</h1>
         <span>
             <Link href="/" class="text-white text-lg"
-                >Home<font-awesome-icon
+                >होमपेज<font-awesome-icon
                     :icon="['fas', 'angle-right']"
                     class="text-white text-sm px-1"
             /></Link>

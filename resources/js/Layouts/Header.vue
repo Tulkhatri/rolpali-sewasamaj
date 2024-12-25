@@ -1,19 +1,19 @@
 <script setup>
 import { Link, usePage } from "@inertiajs/vue3";
 import { ref, onMounted, onBeforeUnmount } from "vue";
-import GoogleTranslate from "../components/LanguageTranslate/GoogleTranslate.vue";
+// import GoogleTranslate from "../components/LanguageTranslate/GoogleTranslate.vue";
 const page = usePage();
 const isMobileView = ref(window.innerWidth < 1092); 
 const isMenuOpen = ref(false); // Track menu open/close state
 
 const menuItems = [
-    { name: 'Home Page', route: route('home'), component: 'Home' },
-    { name: 'About Us', route: route('about'), component: 'About' },
-    { name: 'Donation', route: route('donation'), component: 'FrontPanel/Donation/Donation' },
-    { name: 'Gallery', route: route('gallery'), component: 'Gallery' },
-    { name: 'Event', route: route('event'), component: 'Event' },
-    { name: 'News', route: route('news'), component: 'News' },
-    { name: 'Contact', route: route('contactus'), component: 'ContactUs' },
+    { name: 'होमपेज', route: route('home'), component: 'FrontPanel/Dashboard/Home' },
+    { name: 'हाम्रो बारेमा', route: route('about'), component: 'FrontPanel/About' },
+    { name: 'सहयोग ', route: route('donation'), component: 'FrontPanel/Donation/Donation' },
+    { name: 'फोटो / भिडियो ', route: route('gallery'), component: 'Gallery' },
+    { name: 'कार्यक्रम', route: route('event'), component: 'FrontPanel/Event/Event' },
+    { name: 'समाचार', route: route('news'), component: 'FrontPanel/News/News' },
+    { name: 'सम्पर्क गर्नुहोस', route: route('contactus'), component: 'ContactUs' },
 ];
 
 const checkScreenSize = () => {
@@ -42,7 +42,7 @@ onBeforeUnmount(() => {
 <template>
     <div class="top-social-media-section">
         <div class="bg-theme-light px-5 py-2 lg:px-56 flex justify-between">
-            <p class="text-sm md:text-lg">Empowering communities and fostering growth for a brighter Rolpa.</p>
+            <p class="text-sm md:text-lg">समुदायलाई सशक्तिकरण र विकासलाई प्रोत्साहन</p>
             <div class="social-media-wrapper whitespace-nowrap">
                 <a href="https://www.facebook.com/profile.php?id=100089722701713" target="_blank" rel="noopener noreferrer">
                     <font-awesome-icon
@@ -66,7 +66,7 @@ onBeforeUnmount(() => {
                         src="../../assets/images/logo.png"
                         alt="Logo"
                     />
-                    <span class="mx-2 text-sm md:text-lg">Rolpali Sewa samaj</span>
+                    <span class="mx-2 text-sm md:text-lg">रोल्पाली सेवा समाज रोल्पा</span>
                 </div>
             </Link>
             <div class="social-media-wrapper flex">
@@ -98,12 +98,12 @@ onBeforeUnmount(() => {
             <div class="right-button flex justify-between items-center">
                 <div class="button-wrapper flex justify-between gap-1">
                     <div class="custom-slider-top-button bg-white text-red-600 m-4 px-6 py-1.5 rounded-3xl text-nowrap">
-                        <Link :href="route('contactus')">Donate</Link>
+                        <Link :href="route('contactus')">सहयोग </Link>
                     </div>
                     <div class="custom-slider-top-button bg-white text-red-600 my-4 mr-4 px-6 py-1.5 rounded-3xl text-nowrap">
-                        <Link :href="route('contactus')">Join</Link>
+                        <Link :href="route('contactus')">जोदिनुस</Link>
                     </div>
-        <GoogleTranslate />
+        <!-- <GoogleTranslate /> -->
 
              </div>
                 <font-awesome-icon 

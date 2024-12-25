@@ -17,6 +17,42 @@ const menuItems = [
         icon: ["fas", "hand-holding-dollar"],
         component:'BackPanel/Donation/Donation'
     },
+    {
+        name: "Aboutus",
+        route: "admin.aboutus",
+        icon: ['fas', 'address-card'],
+        component:'BackPanel/Aboutus/Aboutus'
+    },
+    {
+        name: "Our Team",
+        route: "admin.ourteam",
+        icon: ["fas", "users"],
+        component:'BackPanel/OurTeam/OurTeam'
+    },
+    {
+        name: "Slider",
+        route: "admin.slider",
+        icon: ["fab", "usps"],
+        component:'BackPanel/Slider/Slider'
+    },
+    {
+        name: "Event",
+        route: "admin.event",
+        icon: ['fas', 'calendar-check'],
+        component:'BackPanel/Event/Event'
+    },
+    {
+        name: "News",
+        route: "admin.news",
+        icon: ['fa-solid', 'fa-earth-asia'],
+        component:'BackPanel/News/News'
+    },
+    {
+        name: "Message",
+        route: "admin.contact",
+        icon: ['fas', 'envelope'],
+        component:'BackPanel/Contact/Contact'
+    },
 ];
 </script>
 
@@ -24,7 +60,7 @@ const menuItems = [
     <div
         :class="[
             'shadow-[0px_0_0px_1px_#B9B9B9] bg-blue-300 transition-all duration-300 overflow-x-hidden',
-            isMenuOpen ? 'w-[17%]' : 'w-[49px]',
+            isMenuOpen ? 'w-[17%]' : 'w-[45px]',
         ]">
         <ul>
             <li
