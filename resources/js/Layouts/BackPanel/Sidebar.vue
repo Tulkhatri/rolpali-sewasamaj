@@ -12,16 +12,16 @@ const menuItems = [
         component:'BackPanel/Dashboard/Dashboard'
     },
     {
-        name: "Donation",
-        route: "admin.donation",
-        icon: ["fas", "hand-holding-dollar"],
-        component:'BackPanel/Donation/Donation'
-    },
-    {
         name: "Aboutus",
         route: "admin.aboutus",
         icon: ['fas', 'address-card'],
         component:'BackPanel/Aboutus/Aboutus'
+    },
+    {
+        name: "Branch",
+        route: "admin.branch",
+        icon: ["fas", "code-branch"],
+        component:'BackPanel/Branch/Branch'
     },
     {
         name: "Our Team",
@@ -34,6 +34,12 @@ const menuItems = [
         route: "admin.slider",
         icon: ["fab", "usps"],
         component:'BackPanel/Slider/Slider'
+    },
+    {
+        name: "Donation",
+        route: "admin.donation",
+        icon: ["fas", "hand-holding-dollar"],
+        component:'BackPanel/Donation/Donation'
     },
     {
         name: "Event",

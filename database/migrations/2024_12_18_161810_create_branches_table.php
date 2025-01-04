@@ -11,16 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('our_teams', function (Blueprint $table) {
+        Schema::create('branches', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('branchid')->constrained('branches','id');
-            $table->string('name')->nullable();
-            $table->string('designation')->nullable();
-            $table->string('facebook')->nullable();
+            $table->string('branchname')->nullable();
             $table->integer('order')->nullable();
-            $table->text('detail')->nullable();
-            $table->string('image')->nullable();
-            $table->string('slug')->nullable();
             $table->enum('status', ['Y', 'N'])->default('Y');
             $table->timestamps();
         });
@@ -31,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('our_teams');
+        Schema::dropIfExists('branches');
     }
 };

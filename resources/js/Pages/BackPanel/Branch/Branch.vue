@@ -4,7 +4,7 @@ import { debounce } from "lodash";
 import { router } from "@inertiajs/vue3";
 import PaginationLink from "../../../components/BackPanel/PaginationLink.vue";
 defineProps({
-    ourteam: Object,
+    branch: Object,
     searchTerm: String,
     can: Object,
 });
@@ -14,7 +14,7 @@ watch(
     debounce(
         (q) =>
             router.post(
-                "/admin/ourteam",
+                "/admin/branch",
                 { search: q },
                 { preserveState: true }
             ),
@@ -22,11 +22,11 @@ watch(
     )
 );
 // Method to handle edit navigation
-const editOurTeam = (id) => {
-    router.post("/admin/ourteam/form", { id }, { preserveState: true });
+const editBranch = (id) => {
+    router.post("/admin/branch/form", { id }, { preserveState: true });
 };
-const deleteOurTeam = (id) => {
-    router.post("/admin/ourteam/delete", { id }, { preserveState: true });
+const deleteBranch = (id) => {
+    router.post("/admin/branch/delete", { id }, { preserveState: true });
 };
 
 </script>
@@ -36,7 +36,7 @@ const deleteOurTeam = (id) => {
             class="header flex justify-between items-center shadow-[0_0_2px_0px_#B9B9B9] p-3"
         >
             <div class="left flex justify-start items-center gap-2">
-                <h1>Our Team</h1>
+                <h1><B></B>ranch</h1>
                 <font-awesome-icon :icon="['fas', 'arrow-down']" />
             </div>
             <div class="right">
@@ -55,7 +55,7 @@ const deleteOurTeam = (id) => {
                         <div
                             class="custom-slider-top-button-admin bg-blue-300 px-3 py-1.5 rounded-md text-nowrap"
                         >
-                            <Link :href="route('admin.ourteam.form')"
+                            <Link :href="route('admin.branch.form')"
                                 >Add
                                 <font-awesome-icon
                                     :icon="['fas', 'plus']"
@@ -77,25 +77,10 @@ const deleteOurTeam = (id) => {
                             S.N.
                         </th>
                         <th class="border border-gray-300 p-2 text-left">
-                            Name
+                            Branch Name
                         </th>
                         <th class="border border-gray-300 p-2 text-left">
-                            Branch
-                        </th>
-                        <th class="border border-gray-300 p-2 text-left">
-                            Image
-                        </th>
-                        <th class="border border-gray-300 p-2 text-left">
-                           Post
-                        </th>
-                        <th class="border border-gray-300 p-2 text-left">
-                           Team Order
-                        </th>
-                        <th class="border border-gray-300 p-2 text-left">
-                            Facebook
-                        </th>
-                        <th class="border border-gray-300 p-2 text-left">
-                            Details
+                            Branch Order
                         </th>
                         <th class="border border-gray-300 p-2 text-center">
                             Action
@@ -103,45 +88,22 @@ const deleteOurTeam = (id) => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(item, index) in ourteam?.data" :key="item.id">
+                    <tr v-for="(item, index) in branch.data" :key="item.id">
                         <td class="border border-gray-300 p-2">
                             {{ index + 1 }}
                         </td>
                         <td class="border border-gray-300 p-2">
-                            {{ item.name }}
-                        </td>
-                        <td class="border border-gray-300 p-2">
-                            {{ item?.branch?.branchname }}
-                        </td>
-                        <td class="border border-gray-300 p-2">
-                            <img
-                                :src="
-                                    item.image
-                                        ? '/storage/' + item.image
-                                        : '/noimage.png'
-                                "
-                                alt=""
-                                class="w-12 h-12"
-                            />
-                        </td>
-                        <td class="border border-gray-300 p-2">
-                            {{ item.designation }}
+                            {{ item.branchname }}
                         </td>
                         <td class="border border-gray-300 p-2">
                             {{ item.order }}
-                        </td>
-                        <td class="border border-gray-300 p-2">
-                            {{ item.facebook }}
-                        </td>
-                        <td class="border border-gray-300 p-2">
-                            {{ item.detail }}
                         </td>
                         <td class="border border-gray-300 p-2">
                             <div
                                 class="action-wrapper flex justify-center items-center gap-2"
                             >
                                 <div
-                                     @click="editOurTeam(item.id)"
+                                     @click="editBranch(item.id)"
                                     class="edit cursor-pointer"
                                 >
                                     <font-awesome-icon
@@ -151,7 +113,7 @@ const deleteOurTeam = (id) => {
                                     Edit
                         </div>
                         <div
-                                     @click="deleteOurTeam(item.id)"
+                                     @click="deleteBranch(item.id)"
                                     class="delete cursor-pointer"
                                 >
                                     <font-awesome-icon
@@ -168,7 +130,7 @@ const deleteOurTeam = (id) => {
             <!-- Pagination Links -->
         </div>
         <div class="m-4">
-            <PaginationLink :paginator="ourteam" />
+            <PaginationLink :paginator="branch" />
         </div>
     </div>
 </template>

@@ -3,33 +3,30 @@
 namespace App\Http\Controllers\BackPanel;
 
 use App\Http\Controllers\Controller;
-use App\Models\BackPanel\Slider;
+use App\Models\BackPanel\Branch;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\DB;
 use Exception;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Inertia\Inertia;
-
-class SliderController extends Controller
+class BranchController extends Controller
 {
     public function index(Request $request)
     {
         $post = $request->all();
-        $sliderQuery = Slider::query();
+        $branchQuery = Branch::query()->orderby('order','asc');
 
         if (!empty($post['search'])) {
-            $sliderQuery->where('title', 'like', '%' . $post['search'] . '%')
-                ->orWhere('detail', 'like', '%' . $post['search'] . '%');
+            $branchQuery->where('branchname', 'like', '%' . $post['search'] . '%');
         }
 
-        $slider = $sliderQuery->paginate(12);
+        $branch = $branchQuery->paginate(12);
 
         $data = [
-            'slider' => $slider,
+            'branch' => $branch,
         ];
-        return Inertia::render('BackPanel/Slider/Slider', $data);
+        return Inertia::render('BackPanel/Branch/Branch', $data);
     }
 
     public function form(Request $request)
@@ -37,9 +34,9 @@ class SliderController extends Controller
         $post = $request->all();
         $data = [];
         if (!empty($post['id'])) {
-            $data['slider'] = $post['id'] ? Slider::findOrFail($post['id']) : null;
+            $data['branch'] = $post['id'] ? Branch::findOrFail($post['id']) : null;
         }
-        return Inertia::render('BackPanel/Slider/Form', $data);
+        return Inertia::render('BackPanel/Branch/Form', $data);
     }
 
     public function save(Request $request)
@@ -48,15 +45,11 @@ class SliderController extends Controller
             sleep(1);
             $post = $request->all();
             $rules = [
-                'title' => 'required',
-                'detail' => 'nullable',
-                'image' => 'nullable|mimes:jpg,jpeg,png|max:512',
+                'branchname' => 'required',
             ];
 
             $message = [
-                'title.required' => "Please Enter Slider Title",
-                'image.mimes' => 'Slider image must be a file of type: jpg, jpeg, png.',
-                'image.max' => 'Slider image must not exceed 512 KB.',
+                'branchname.required' => "Please Enter Branch",
             ];
 
             $validate = Validator::make($post, $rules, $message);
@@ -73,11 +66,7 @@ class SliderController extends Controller
             $message = "Record Saved Succefully";
 
             DB::beginTransaction();
-
-            if ($request->hasFile('image')) {
-                $post['image'] = Storage::disk('public')->put('slider', $request->image);
-            }
-            if (!Slider::saveData($post)) {
+            if (!Branch::saveData($post)) {
                 throw new Exception("Could not Save Record", 1);
             }
 
@@ -92,9 +81,9 @@ class SliderController extends Controller
             $message = $e->getMessage();
         }
         if ($type === "error") {
-            return to_route('admin.slider.form')->with(['message' => $message, 'type' => $type]);
+            return to_route('admin.branch.form')->with(['message' => $message, 'type' => $type]);
         }
-        return to_route('admin.slider')->with(['message' => $message, 'type' => $type]);
+        return to_route('admin.branch')->with(['message' => $message, 'type' => $type]);
         // return back()->with('message',$message);
     }
 
@@ -109,17 +98,7 @@ class SliderController extends Controller
 
             DB::beginTransaction();
 
-            $folder = storage_path('app/public/');
-            $slider = Slider::where('id', $post['id'])->first();
-            $imagePath=$slider->image;
-            if(!empty($imagePath)){
-                $filePath =$folder. $imagePath;
-                if (file_exists($filePath)) {
-                    unlink($filePath);
-                }
-            }
-
-            if (!Slider::where('id', $post['id'])->delete()) {
+            if (!Branch::where('id', $post['id'])->delete()) {
                 throw new Exception("Could not delete record", 1);
             }
 
@@ -133,7 +112,7 @@ class SliderController extends Controller
             $type = "error";
             $message = $e->getMessage();
         }
-        return to_route('admin.slider')->with(['message' => $message, 'type' => $type]);
+        return to_route('admin.branch')->with(['message' => $message, 'type' => $type]);
         // return back()->with('message',$message);
     }
 }
