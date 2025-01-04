@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\BackPanel;
 
 use App\Http\Controllers\Controller;
+use App\Models\BackPanel\Branch;
 use App\Models\BackPanel\OurTeam;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
@@ -17,7 +18,7 @@ class OurTeamController extends Controller
     public function index(Request $request)
     {
         $post = $request->all();
-        $ourTeamQuery = OurTeam::query();
+        $ourTeamQuery = OurTeam::query()->with('branch')->orderby('order','asc');
 
         if (!empty($post['search'])) {
             $ourTeamQuery->where('name', 'like', '%' . $post['search'] . '%')
@@ -36,6 +37,12 @@ class OurTeamController extends Controller
     {
         $post = $request->all();
         $data = [];
+
+        $branch = Branch::selectraw('id,branchname')->where('status','y')->get()->all();
+        $data=[
+            'branch'=>$branch
+        ];
+
         if (!empty($post['id'])) {
             $data['ourteam'] = $post['id'] ? OurTeam::findOrFail($post['id']) : null;
         }
@@ -48,16 +55,16 @@ class OurTeamController extends Controller
             sleep(1);
             $post = $request->all();
             $rules = [
-                'title' => 'required',
-                'detail' => 'required',
+                'branchid' => 'required',
+                'name' => 'required',
                 'image' => 'nullable|mimes:jpg,jpeg,png|max:512',
             ];
 
             $message = [
-                'title.required' => "Please Enter Donation Title",
-                'detail.required' => "please Enter Donation Detail",
-                'image.mimes' => 'The introduction image must be a file of type: jpg, jpeg, png.',
-                'image.max' => 'The introduction image must not exceed 512 KB.',
+                'branchid.required' => "Please select branch",
+                'name.required' => "Please enter team name",
+                'image.mimes' => 'Image must be a file of type: jpg, jpeg, png.',
+                'image.max' => 'Image must not exceed 512 KB.',
             ];
 
             $validate = Validator::make($post, $rules, $message);
@@ -86,7 +93,7 @@ class OurTeamController extends Controller
         } catch (QueryException) {
             DB::rollBack();
             $type = "error";
-            $message = $this->queryMessage();
+            $message = "Something went wrong, Please contact administartion.";
         } catch (Exception $e) {
             DB::rollBack();
             $type = "error";
@@ -109,6 +116,17 @@ class OurTeamController extends Controller
             $message = "Record delete Succefully";
 
             DB::beginTransaction();
+
+            $folder = storage_path('app/public/');
+            $ourteam = OurTeam::where('id', $post['id'])->first();
+            $imagePath=$ourteam->image;
+            if(!empty($imagePath)){
+                $filePath =$folder. $imagePath;
+                if (file_exists($filePath)) {
+                    unlink($filePath);
+                }
+            }
+
             if (!OurTeam::where('id', $post['id'])->delete()) {
                 throw new Exception("Could not delete record", 1);
             }

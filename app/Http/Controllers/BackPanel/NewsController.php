@@ -53,10 +53,10 @@ class NewsController extends Controller
             ];
 
             $message = [
-                'title.required' => "Please Enter Donation Title",
-                'detail.required' => "please Enter Donation Detail",
-                'image.mimes' => 'The introduction image must be a file of type: jpg, jpeg, png.',
-                'image.max' => 'The introduction image must not exceed 512 KB.',
+                'title.required' => "Please Enter News Title",
+                'detail.required' => "Please Enter News Detail",
+                'image.mimes' => 'The news image must be a file of type: jpg, jpeg, png.',
+                'image.max' => 'The news image must not exceed 512 KB.',
             ];
 
             $validate = Validator::make($post, $rules, $message);
@@ -108,6 +108,17 @@ class NewsController extends Controller
             $message = "Record delete Succefully";
 
             DB::beginTransaction();
+
+            $folder = storage_path('app/public/');
+            $news = News::where('id', $post['id'])->first();
+            $imagePath=$news->image;
+            if(!empty($imagePath)){
+                $filePath =$folder. $imagePath;
+                if (file_exists($filePath)) {
+                    unlink($filePath);
+                }
+            }
+
             if (!News::where('id', $post['id'])->delete()) {
                 throw new Exception("Could not delete record", 1);
             }

@@ -25,7 +25,7 @@ watch(
 const editEvent = (id) => {
     router.post("/admin/event/form", { id }, { preserveState: true });
 };
-const deleteEventn = (id) => {
+const deleteEvent = (id) => {
     router.post("/admin/event/delete", { id }, { preserveState: true });
 };
 

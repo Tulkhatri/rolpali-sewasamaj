@@ -62,8 +62,12 @@ class FrontController extends Controller
     {
     $data=[
         'aboutus' => Aboutus::selectraw('vision_title,vision_detail,vision_image')->get()->first(),
-        'ourteam'=>OurTeam::selectraw('name,designation,facebook,detail,image')->orderby('id','asc')->get()->all()
-    ];
+        'ourteam' => OurTeam::selectRaw('name, designation, facebook, detail, image, branchid')
+        ->with('branch') 
+        ->orderBy('order', 'asc')
+        ->get()
+        ->groupBy('branch.branchname') // Group by branch name
+        ];
 
         sleep(1);
         return Inertia::render('FrontPanel/About',$data);

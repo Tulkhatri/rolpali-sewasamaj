@@ -109,6 +109,17 @@ class DonationController extends Controller
             $message = "Record delete Succefully";
 
             DB::beginTransaction();
+
+            $folder = storage_path('app/public/');
+            $donation = Donation::where('id', $post['id'])->first();
+            $imagePath=$donation->image;
+            if(!empty($imagePath)){
+                $filePath =$folder. $imagePath;
+                if (file_exists($filePath)) {
+                    unlink($filePath);
+                }
+            }
+
             if (!Donation::where('id', $post['id'])->delete()) {
                 throw new Exception("Could not delete record", 1);
             }

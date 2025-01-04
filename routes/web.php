@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BackPanel\AboutusController;
 use App\Http\Controllers\BackPanel\AuthController;
+use App\Http\Controllers\BackPanel\BranchController;
 use App\Http\Controllers\BackPanel\DonationController;
 use App\Http\Controllers\BackPanel\EventController;
 use App\Http\Controllers\BackPanel\NewsController;
@@ -29,6 +30,12 @@ Route::middleware('auth')->group(function () {
             return Inertia::render('BackPanel/Dashboard/Dashboard');
         })->name('admin.dashboard');
 
+        Route::group(['prefix' => 'branch'], function () {
+            Route::any('/', [BranchController::class, 'index'])->name('admin.branch');
+            Route::any('/form', [BranchController::class, 'form'])->name('admin.branch.form');
+            Route::post('/save', [BranchController::class, 'save'])->name('admin.branch.save');
+            Route::post('/delete', [BranchController::class, 'delete'])->name('admin.branch.delete');
+        });
         Route::group(['prefix' => 'donation'], function () {
             Route::any('/', [DonationController::class, 'index'])->name('admin.donation');
             Route::any('/form', [DOnationController::class, 'form'])->name('admin.donation.form');

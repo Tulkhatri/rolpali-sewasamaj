@@ -6,14 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 use Exception;
-use Illuminate\Support\Str;
-
-class OurTeam extends Model
+class Branch extends Model
 {
     use HasFactory;
-    public function branch()
+
+    public function teams()
     {
-        return $this->belongsTo(Branch::class, 'branchid', 'id');
+        return $this->hasMany(OurTeam::class, 'branchid', 'id');
     }
 
     public static function saveData($post)
@@ -21,25 +20,17 @@ class OurTeam extends Model
         try {
 
             $dataArray = [
-                'branchid' => $post['branchid'],
-                'name' => $post['name'],
-                'designation' => $post['designation'],
-                'facebook' => $post['facebook'],
-                'detail' => $post['detail'],
+                'branchname' => $post['branchname'],
                 'order' => $post['order'],
-                'slug' => Str::slug('ourteam'.'-'.time())
             ];
-            if ($post['image']) {
-                $dataArray['image'] = $post['image'];
-            }
             if (!empty($post['id'])) {
                 $dataArray['updated_at'] = Carbon::now();
-                if (!OurTeam::where('id', $post['id'])->update($dataArray)) {
+                if (!Branch::where('id', $post['id'])->update($dataArray)) {
                     throw new Exception("Couldn't update records", 1);
                 }
             } else {
                 $dataArray['created_at'] = Carbon::now();
-                if ((!OurTeam::insert($dataArray))) {
+                if ((!Branch::insert($dataArray))) {
                     throw new Exception("Couldn't save records", 1);
                 }
             }
@@ -49,4 +40,3 @@ class OurTeam extends Model
         }
     }
 }
-

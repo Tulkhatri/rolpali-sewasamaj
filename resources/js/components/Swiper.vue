@@ -52,7 +52,8 @@ const scrollToSection = () => {
                 <a href="javascript:void(0);" @click="scrollToSection"
                     class="bg-theme-red px-4 py-2 rounded-md font-semibold hover:bg-slate-50 hover:text-[#193eb8]"
                 >
-                सम्पर्क गर्नुहोस
+                <Link :href="route('contactus')">सम्पर्क गर्नुहोस </Link>
+              
                 </a>
             </div>
         </swiper-slide>

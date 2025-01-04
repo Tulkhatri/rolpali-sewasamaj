@@ -53,10 +53,10 @@ class EventController extends Controller
             ];
 
             $message = [
-                'title.required' => "Please Enter Donation Title",
-                'detail.required' => "please Enter Donation Detail",
-                'image.mimes' => 'The introduction image must be a file of type: jpg, jpeg, png.',
-                'image.max' => 'The introduction image must not exceed 512 KB.',
+                'title.required' => "Please Enter Event Title",
+                'detail.required' => "please Enter Event Detail",
+                'image.mimes' => 'Event image must be a file of type: jpg, jpeg, png.',
+                'image.max' => 'Event image must not exceed 512 KB.',
             ];
 
             $validate = Validator::make($post, $rules, $message);
@@ -108,6 +108,18 @@ class EventController extends Controller
             $message = "Record delete Succefully";
 
             DB::beginTransaction();
+
+
+            $folder = storage_path('app/public/');
+            $event = Event::where('id', $post['id'])->first();
+            $imagePath = $event->image;
+            if (!empty($imagePath)) {
+                $filePath = $folder . $imagePath;
+                if (file_exists($filePath)) {
+                    unlink($filePath);
+                }
+            }
+
             if (!Event::where('id', $post['id'])->delete()) {
                 throw new Exception("Could not delete record", 1);
             }
