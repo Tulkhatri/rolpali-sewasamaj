@@ -25,7 +25,7 @@ function formatDate(dateString) {
             </p>
         </div>
         <div class="upcomming-event-row flex flex-col lg:flex-row items-center mt-10 px-5 lg:px-56 gap-7">
-            <Link :href="route('event.detail',event[0]?.slug??'')" class="mission-container basis-1/2 group">
+            <Link v-if="event[0]?.slug" :href="route('event.detail',event[0]?.slug??'')" class="mission-container basis-1/2 group">
                 <div class="image-wrapper relative">
                     <img :src="event[0]?.image?'/storage/'+ event[0].image:'/noimage.png'" alt="" class="w-full h-80 object-cover" />
                     <div class="date-wrapper absolute bg-red-500 py-4 px-6 text-white font-bold text-xl text-center bottom-0 z-10">
