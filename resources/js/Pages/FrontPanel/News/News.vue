@@ -44,7 +44,7 @@ function formatDate(dateString) {
                 >
                     <h1 class="text-xl font-medium group-hover:text-red-600">{{ item.title.length>20 ? item.title.substring(0,20)+'...':item.title }}</h1>
                     <p class="mt-2">
-                        {{ item.detail.length>50 ? item.detail.substring(0,50)+'...':item.detail }}
+                        {{ item?.detail?.length>50 ? item.detail.substring(0,50)+'...':item.detail }}
                     </p>
                 </div>
                 <h1 class="border-red-100 custom-shadow py-2 px-3">

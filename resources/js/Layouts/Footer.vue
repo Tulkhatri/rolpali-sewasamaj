@@ -55,7 +55,7 @@ const showNotification = (message, type) => {
                     <font-awesome-icon
                         :icon="['fas', 'location-dot']"
                         class="mr-3"
-                    /><span>घोराही–१४, दाङ</span>
+                    /><span>लिवाङ,रोल्पा</span>
                 </div>
                 <div class="icon-text my-4">
                     <font-awesome-icon :icon="['fas', 'phone']" class="mr-3" />

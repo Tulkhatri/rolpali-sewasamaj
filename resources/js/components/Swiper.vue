@@ -48,7 +48,7 @@ const scrollToSection = () => {
             <div class="absolute inset-0 bg-sky-600/30"></div>
             <div class="absolute bottom-5 md:bottom-32 lg:left-56 text-white text-center w-full md:text-left">
                 <h2 class="text-xl md:text-2xl mb-5">{{item.title}}</h2>
-                <!-- <p class="lg my-3">port when you need it contact us</p> -->
+                <p class="lg my-3 md:w-[50%]">{{item.detail}}</p>
                 <a href="javascript:void(0);" @click="scrollToSection"
                     class="bg-theme-red px-4 py-2 rounded-md font-semibold hover:bg-slate-50 hover:text-[#193eb8]"
                 >

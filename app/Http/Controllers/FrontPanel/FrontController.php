@@ -18,7 +18,7 @@ class FrontController extends Controller
     {
     $data=[
         'aboutus' => Aboutus::get()->first(),
-        'slider' => Slider::selectraw('title,image')->where('status','Y')->orderby('id','desc')->get()->all(),
+        'slider' => Slider::selectraw('title,detail,image')->where('status','Y')->orderby('id','desc')->get()->all(),
         'event' => Event::selectraw('title,image,detail,address,event_date,slug')->where('status','Y')->orderby('id','desc')->limit(4)->get()->all(),
         'donation' => Donation::limit(3)->orderby('id','desc')->get()->all(),
     ];
