@@ -41,7 +41,7 @@ onBeforeUnmount(() => {
 <template>
   <header class="bg-white sticky top-0 z-20 shadow-md">
     <div class="flex justify-between items-center mx-5 py-2">
-      <div class="w-[50%] md:w-[15%] flex justify-between items-center gap-2">
+      <div class="w-[65%] md:w-[15%] flex justify-between items-center gap-2">
         <Link :href="route('admin.dashboard')">
           <div class="img-wrapper flex justify-start items-center gap-1">
             <img src="../../../assets/images/logo.png" class="w-14" />
