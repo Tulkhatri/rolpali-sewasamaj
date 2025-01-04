@@ -41,11 +41,11 @@ onBeforeUnmount(() => {
 <template>
   <header class="bg-white sticky top-0 z-20 shadow-md">
     <div class="flex justify-between items-center mx-5 py-2">
-      <div class="w-[15%] flex justify-between items-center gap-2">
+      <div class="w-[50%] md:w-[15%] flex justify-between items-center gap-2">
         <Link :href="route('admin.dashboard')">
           <div class="img-wrapper flex justify-start items-center gap-1">
-            <img src="../../../assets/images/logo.jpg" class="w-14" />
-            <h2 class="">Rolpali Sewa Samaj Rolpa</h2>
+            <img src="../../../assets/images/logo.png" class="w-14" />
+            <h2 class="">रोल्पाली सेवा समाज रोल्पा</h2>
           </div>
         </Link>
         <font-awesome-icon
@@ -84,7 +84,7 @@ onBeforeUnmount(() => {
                 :icon="['fas', 'user']"
                 class="rounded-full bg-[#B9B9B9] px-2.5 py-2 text-2xl text-white"
               />
-              <h2 class="text-nowrap">Tul Bahadur Khatri</h2>
+              <h2 class="text-nowrap">Admin</h2>
             </Link>
             <hr class="h-[0.1rem] mt-2 bg-[#dad8d8]" />
             <Link

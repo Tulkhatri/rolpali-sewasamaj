@@ -6,55 +6,55 @@ console.log(page.component);
 
 const menuItems = [
     {
-        name: "Home Page",
+        name: "होमपेज",
         route: "admin.dashboard",
         icon: ["fas", "house"],
         component:'BackPanel/Dashboard/Dashboard'
     },
     {
-        name: "Aboutus",
+        name: "हाम्रो बारेमा",
         route: "admin.aboutus",
         icon: ['fas', 'address-card'],
         component:'BackPanel/Aboutus/Aboutus'
     },
     {
-        name: "Branch",
+        name: "शाखा",
         route: "admin.branch",
         icon: ["fas", "code-branch"],
         component:'BackPanel/Branch/Branch'
     },
     {
-        name: "Our Team",
+        name: "हाम्रो टोली",
         route: "admin.ourteam",
         icon: ["fas", "users"],
         component:'BackPanel/OurTeam/OurTeam'
     },
     {
-        name: "Slider",
+        name: "स्लाइडर",
         route: "admin.slider",
         icon: ["fab", "usps"],
         component:'BackPanel/Slider/Slider'
     },
     {
-        name: "Donation",
+        name: "सहयोग",
         route: "admin.donation",
         icon: ["fas", "hand-holding-dollar"],
         component:'BackPanel/Donation/Donation'
     },
     {
-        name: "Event",
+        name: "कार्यक्रम",
         route: "admin.event",
         icon: ['fas', 'calendar-check'],
         component:'BackPanel/Event/Event'
     },
     {
-        name: "News",
+        name: "समाचार",
         route: "admin.news",
         icon: ['fa-solid', 'fa-earth-asia'],
         component:'BackPanel/News/News'
     },
     {
-        name: "Message",
+        name: "सन्देश",
         route: "admin.contact",
         icon: ['fas', 'envelope'],
         component:'BackPanel/Contact/Contact'
@@ -66,7 +66,7 @@ const menuItems = [
     <div
         :class="[
             'shadow-[0px_0_0px_1px_#B9B9B9] bg-blue-300 transition-all duration-300 overflow-x-hidden',
-            isMenuOpen ? 'w-[17%]' : 'w-[45px]',
+            isMenuOpen ? 'w-[40%] md:w-[17%]' : 'w-[45px]',
         ]">
         <ul>
             <li

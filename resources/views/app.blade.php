@@ -9,7 +9,7 @@
     <meta property="og:url" content="https://rolpalisewasamaj.org">
     <meta property="og:type" content="website">
      <!-- Link to the new favicon -->
-     <link rel="icon" href="{{ asset('favicon.jpg') }}" type="image/x-icon" />
+     <link rel="icon" href="{{ asset('favicon.png') }}" type="image/x-icon" />
     @vite('resources/js/app.js')
     @inertiaHead
     @routes

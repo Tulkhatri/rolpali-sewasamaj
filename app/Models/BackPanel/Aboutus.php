@@ -30,39 +30,27 @@ class Aboutus extends Model
             ];
 
             if ($post['aboutus_image']) {
-                $dataArray = [
-                    'aboutus_image' => $post['aboutus_image']
-                ];
+                $dataArray['aboutus_image'] = $post['aboutus_image'];
             }
             if ($post['chairman_image']) {
-                $dataArray = [
-                    'chairman_image' => $post['chairman_image']
-                ];
+                $dataArray ['chairman_image'] = $post['chairman_image'];
             }
             if ($post['vision_image']) {
-                $dataArray = [
-                    'vision_image' => $post['vision_image']
-                ];
+                $dataArray['vision_image'] = $post['vision_image'];
             }
             if ($post['mission1_image']) {
-                $dataArray = [
-                    'mission1_image' => $post['mission1_image']
-                ];
+                $dataArray['mission1_image'] = $post['mission1_image'];
             }
             if ($post['mission2_image']) {
-                $dataArray = [
-                    'mission2_image' => $post['mission2_image']
-                ];
+                $dataArray['mission2_image'] = $post['mission2_image'];
             }
             if ($post['mission3_image']) {
-                $dataArray = [
-                    'mission3_image' => $post['mission3_image']
-                ];
+                $dataArray[ 'mission3_image'] = $post['mission3_image'];
             }
-                $dataArray['updated_at'] = Carbon::now();
-                if (!Aboutus::where('id', 1)->update($dataArray)) {
-                    throw new Exception("Couldn't update records", 1);
-                }
+            $dataArray['updated_at'] = Carbon::now();
+            if (!Aboutus::where('id', 1)->update($dataArray)) {
+                throw new Exception("Couldn't update records", 1);
+            }
            
             return true;
         } catch (Exception $e) {
