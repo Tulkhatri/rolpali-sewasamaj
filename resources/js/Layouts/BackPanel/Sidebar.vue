@@ -66,7 +66,7 @@ const menuItems = [
     <div
         :class="[
             'shadow-[0px_0_0px_1px_#B9B9B9] bg-blue-300 transition-all duration-300 overflow-x-hidden',
-            isMenuOpen ? 'w-[40%] md:w-[17%]' : 'w-[45px]',
+            isMenuOpen ? 'w-[50%] md:w-[17%]' : 'w-[45px]',
         ]">
         <ul>
             <li
