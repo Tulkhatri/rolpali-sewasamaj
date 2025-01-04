@@ -83,7 +83,7 @@ defineProps({
                         {{ aboutus?.mission1_title?.length>30 ? aboutus?.mission1_title.substring(0,30) + ' ...':aboutus?.mission1_title  }}
                     </h1>
                     <p class="my-10">
-                         {{ aboutus?.mission2_detail?.length>100 ? aboutus?.mission2_detail.substring(0,100) + ' ...':aboutus?.mission2_detail  }}
+                         {{ aboutus?.mission1_detail?.length>120 ? aboutus?.mission1_detail.substring(0,120) + ' ...':aboutus?.mission1_detail  }}
                     </p>
                         <Link :href="route('mission.detail')" class="py-1 px-10 button-wrapper border-2 border-white rounded-full hover:bg-white hover:text-red-600 hover:transition-all duration-300 ease-in-out">थप पढ्नुहोस  <font-awesome-icon :icon="['fas', 'arrow-right']" /></Link>
                 </div>
@@ -101,19 +101,19 @@ defineProps({
                         class="title-detail-wrapper py-6 px-4 bg-white text-center"
                     >
                         <h1 class="text-xl font-medium">
-                            {{ aboutus?.mission2_title.length>30 ? aboutus?.mission2_title.substring(0,30) + ' ...':aboutus?.mission2_title  }}
+                            {{ aboutus?.mission2_title?.length>30 ? aboutus?.mission2_title.substring(0,30) + ' ...':aboutus?.mission2_title  }}
                         </h1>
                         <p class="mt-2">
-                            {{ aboutus?.mission2_detail.length>100 ? aboutus?.mission2_detail.substring(0,100) + ' ...':aboutus?.mission2_detail  }}
+                            {{ aboutus?.mission2_detail?.length>100 ? aboutus?.mission2_detail.substring(0,100) + ' ...':aboutus?.mission2_detail  }}
                         </p>
                     </div>
                 </div>
                 <div class="mission-hover py-20 px-5 bg-red-600 text-center text-white absolute left-0 top-0 scale-0 group-hover:scale-100 transition-all duration-500">
                     <h1 class="text-xl font-medium">
-                        {{ aboutus?.mission2_title.length>30 ? aboutus?.mission2_title.substring(0,30) + ' ...':aboutus?.mission2_title  }}
+                        {{ aboutus?.mission2_title?.length>30 ? aboutus?.mission2_title?.substring(0,30) + ' ...':aboutus?.mission2_title  }}
                     </h1>
                     <p class="my-10">
-                         {{ aboutus?.mission2_detail.length>100 ? aboutus?.mission2_detail.substring(0,100) + ' ...':aboutus?.mission2_detail  }}
+                         {{ aboutus?.mission2_detail?.length>120 ? aboutus?.mission2_detail?.substring(0,120) + ' ...':aboutus?.mission2_detail  }}
                     </p>
                         <Link :href="route('mission.detail')" class="py-1 px-10 button-wrapper border-2 border-white rounded-full hover:bg-white hover:text-red-600 hover:transition-all duration-300 ease-in-out">थप पढ्नुहोस  <font-awesome-icon :icon="['fas', 'arrow-right']" /></Link>
                 </div>
@@ -131,19 +131,19 @@ defineProps({
                         class="title-detail-wrapper py-6 px-4 bg-white text-center"
                     >
                         <h1 class="text-xl font-medium">
-                            {{ aboutus?.mission3_title.length>30 ? aboutus?.mission3_title.substring(0,30) + ' ...':aboutus?.mission3_title  }}
+                            {{ aboutus?.mission3_title?.length>30 ? aboutus?.mission3_title?.substring(0,30) + ' ...':aboutus?.mission3_title  }}
                         </h1>
                         <p class="mt-2">
-                            {{ aboutus?.mission3_detail.length>100 ? aboutus?.mission3_detail.substring(0,100) + ' ...':aboutus?.mission3_detail  }}
+                            {{ aboutus?.mission3_detail?.length>100 ? aboutus?.mission3_detail?.substring(0,100) + ' ...':aboutus?.mission3_detail  }}
                         </p>
                     </div>
                 </div>
                 <div class="mission-hover py-20 px-5 bg-red-600 text-center text-white absolute left-0 top-0 scale-0 group-hover:scale-100 transition-all duration-500">
                     <h1 class="text-xl font-medium">
-                        {{ aboutus?.mission3_title.length>30 ? aboutus?.mission3_title.substring(0,30) + ' ...':aboutus?.mission3_title  }}
+                        {{ aboutus?.mission3_title?.length>30 ? aboutus?.mission3_title?.substring(0,30) + ' ...':aboutus?.mission3_title  }}
                     </h1>
                     <p class="my-10">
-                         {{ aboutus?.mission2_detail.length>100 ? aboutus?.mission2_detail.substring(0,100) + ' ...':aboutus?.mission2_detail  }}
+                         {{ aboutus?.mission3_detail?.length>120 ? aboutus?.mission3_detail?.substring(0,120) + ' ...':aboutus?.mission3_detail  }}
                     </p>
                         <Link :href="route('mission.detail')" class="py-1 px-10 button-wrapper border-2 border-white rounded-full hover:bg-white hover:text-red-600 hover:transition-all duration-300 ease-in-out">थप पढ्नुहोस  <font-awesome-icon :icon="['fas', 'arrow-right']" /></Link>
                 </div>
