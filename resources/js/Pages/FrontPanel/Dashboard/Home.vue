@@ -156,7 +156,7 @@ defineProps({
 
     <UpCommingEvent :event="event"/>
 
-    <div class="video-testimonials-wrapper w-[100%] flex flex-col lg:flex-row mt-20">
+    <!-- <div class="video-testimonials-wrapper w-[100%] flex flex-col lg:flex-row mt-20">
         <iframe
             width="100%"
             height="400vh"
@@ -168,7 +168,7 @@ defineProps({
             allowfullscreen
         ></iframe>
         <Testimonials />
-    </div>
+    </div> -->
 
     <Donation :donation="donation"/>
 
