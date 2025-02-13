@@ -36,7 +36,7 @@ const deleteBranch = (id) => {
             class="header flex justify-between items-center shadow-[0_0_2px_0px_#B9B9B9] p-3"
         >
             <div class="left flex justify-start items-center gap-2">
-                <h1><B></B>ranch</h1>
+                <h1><B></B>Branch</h1>
                 <font-awesome-icon :icon="['fas', 'arrow-down']" />
             </div>
             <div class="right">
